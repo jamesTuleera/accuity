@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('country');
             $table->string('referal')->nullable();
             $table->string('role')->default('1');
-            // $table->string('re')->nullable();
+            $table->string('mine')->nullable();
             $table->enum('status', ['active', 'disable', 'pending', 'band', 'verified'])->default('active');
 
             $table->timestamp('email_verified_at')->nullable();
