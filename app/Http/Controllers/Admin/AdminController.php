@@ -107,7 +107,7 @@ class AdminController extends Controller
             'type' => $dt->trans_type,
             'transaction_id' => uniqid(),
             'payment_method' => "Bitcoin",
-            'previous_bal' => Auth::user()->wallet->balance,
+            'previous_bal' => 0,
             'amount' => $dt->amount,
             'status' => 'Success'
         ]);
