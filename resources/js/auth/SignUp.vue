@@ -8,7 +8,7 @@
         <form @submit.prevent="signup()" style="overflow:auto">
             <div class="form-group wrap-input">
                 <input
-                    required
+
                     type="text"
                     class="form-control"
                     v-model="first_name"
@@ -18,7 +18,7 @@
             </div>
             <div class="form-group wrap-input">
                 <input
-                    required
+
                     type="text"
                     class="form-control"
                     v-model="last_name"
@@ -27,7 +27,7 @@
             </div>
             <div class="form-group wrap-input">
                 <input
-                    required
+
                     type="email"
                     class="form-control"
                     v-model="email"
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group wrap-input">
                 <input
-                    required
+
                     type="text"
                     class="form-control"
                     v-model="phone"
@@ -44,16 +44,20 @@
                 />
             </div>
             <div class="form-group wrap-input">
-                <Select v-model="country"
+                <Select v-model="countryName"
+                @change="onChange($event)"
+                :required="true"
                 class="form-control">
-                    <option>Select Country</option>
+                    <option >Select Country</option>
                     <option v-for="country in countries">{{ country }}</option>
                 </Select>
             </div>
 
+            <!-- <h2>{{ countryName }}</h2> -->
+
             <div class="form-group wrap-input">
                 <input
-                    required
+
                     type="text"
                     class="form-control"
                     v-model="btc_address"
@@ -73,7 +77,7 @@
 
             <div class="form-group wrap-input">
                     <input
-                        required
+
                         type="password"
                         class="form-control"
                         v-model="password"
@@ -87,7 +91,7 @@
                     <input
                     v-model="password_confirmation"
 
-                        required
+
                         type="password"
                         class="form-control "
                         placeholder="Confirm Password"
@@ -107,7 +111,7 @@
             </div>
 
             <div class="form-group">
-                <input type="checkbox" required style="float: left" />
+                <input type="checkbox"  style="float: left" />
                 <p class="term-policy text-muted small">
                     I agree to the
                     <a href="#" style="color: navy">privacy policy</a> and
@@ -152,7 +156,7 @@ export default {
             btc_address: null,
             email: null,
             phone: null,
-            country: null,
+            countryName: null,
             password: null,
             password_confirmation: null,
             errors: {},
@@ -171,14 +175,27 @@ export default {
             })
         },
 
+        onChange(event) {
+            this.countryName = event.target.value
+            // console.log(event.target.value)
+        },
+
+        // getCoun3(val){
+        //     console.log(val)
+        //     alert('val')
+        // },
+
         signup() {
             this.isDisabled = true
             this.isLoading = true
             this.errors = {};
+
+            console.log(this.countryName)
+            console.log(this.first_name)
             // try {
             axios.post('/register', {
                 btc_address: this.btc_address,
-                country: this.country,
+                country: this.countryName,
                 email: this.email,
                 first_name: this.first_name,
                 last_name: this.last_name,
@@ -198,31 +215,25 @@ export default {
                 //     window.location = '/auth-user'
                 // }
                 window.location = '/home'
-            }).catch((response) => {
+            }).catch(({response}) => {
                 if (response.status === 422) {
                     this.errors = response.data.errors;
-                    console.log(this.errors + "  " + this.isSuccess)
+                    // console.log(this.errors + "  " + this.isSuccess)
                 }
-
-                if (e.response.status == 500) {
+                if (response.status == 500) {
                     swal({
                         title: 'Failed',
                         text: 'Internal Server Error',
                         icon: 'error'
                     })
-
                     alert('Internal server error')
                 }
-
-                if (e.response.status == 419) {
+                if (response.status == 419) {
                     window.location.reload()
                 }
-
             }).finally(()=>{
                 this.isDisabled = false
                 this.isLoading = false
-
-
             })
 
 

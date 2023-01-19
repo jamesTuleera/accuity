@@ -1930,7 +1930,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       btc_address: null,
       email: null,
       phone: null,
-      country: null,
+      countryName: null,
       password: null,
       password_confirmation: null,
       errors: {}
@@ -1959,15 +1959,25 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
+    onChange: function onChange(event) {
+      this.countryName = event.target.value;
+      // console.log(event.target.value)
+    },
+    // getCoun3(val){
+    //     console.log(val)
+    //     alert('val')
+    // },
     signup: function signup() {
       var _this2 = this;
       this.isDisabled = true;
       this.isLoading = true;
       this.errors = {};
+      console.log(this.countryName);
+      console.log(this.first_name);
       // try {
       axios.post('/register', {
         btc_address: this.btc_address,
-        country: this.country,
+        country: this.countryName,
         email: this.email,
         first_name: this.first_name,
         last_name: this.last_name,
@@ -1987,12 +1997,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         //     window.location = '/auth-user'
         // }
         window.location = '/home';
-      })["catch"](function (response) {
+      })["catch"](function (_ref) {
+        var response = _ref.response;
         if (response.status === 422) {
           _this2.errors = response.data.errors;
-          console.log(_this2.errors + "  " + _this2.isSuccess);
+          // console.log(this.errors + "  " + this.isSuccess)
         }
-        if (e.response.status == 500) {
+
+        if (response.status == 500) {
           swal({
             title: 'Failed',
             text: 'Internal Server Error',
@@ -2000,7 +2012,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           });
           alert('Internal server error');
         }
-        if (e.response.status == 419) {
+        if (response.status == 419) {
           window.location.reload();
         }
       })["finally"](function () {
@@ -2060,7 +2072,6 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      required: "",
       type: "text",
       placeholder: "Full name"
     },
@@ -2086,7 +2097,6 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      required: "",
       type: "text",
       placeholder: "Last name"
     },
@@ -2110,7 +2120,6 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      required: "",
       type: "email",
       placeholder: "Email address"
     },
@@ -2134,7 +2143,6 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      required: "",
       type: "text",
       placeholder: "Mobile Number"
     },
@@ -2151,12 +2159,20 @@ var render = function render() {
     staticClass: "form-group wrap-input"
   }, [_c("Select", {
     staticClass: "form-control",
+    attrs: {
+      required: true
+    },
+    on: {
+      change: function change($event) {
+        return _vm.onChange($event);
+      }
+    },
     model: {
-      value: _vm.country,
+      value: _vm.countryName,
       callback: function callback($$v) {
-        _vm.country = $$v;
+        _vm.countryName = $$v;
       },
-      expression: "country"
+      expression: "countryName"
     }
   }, [_c("option", [_vm._v("Select Country")]), _vm._v(" "), _vm._l(_vm.countries, function (country) {
     return _c("option", [_vm._v(_vm._s(country))]);
@@ -2171,7 +2187,6 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      required: "",
       type: "text",
       placeholder: "BTC address"
     },
@@ -2219,7 +2234,6 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      required: "",
       type: "password",
       placeholder: "Password"
     },
@@ -2245,7 +2259,6 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      required: "",
       type: "password",
       placeholder: "Confirm Password"
     },
@@ -2313,8 +2326,7 @@ var staticRenderFns = [function () {
       "float": "left"
     },
     attrs: {
-      type: "checkbox",
-      required: ""
+      type: "checkbox"
     }
   }), _vm._v(" "), _c("p", {
     staticClass: "term-policy text-muted small"
