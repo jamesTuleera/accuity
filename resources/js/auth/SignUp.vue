@@ -147,14 +147,14 @@ export default {
             isDisabled: false,
 
             ref_email: null,
-            first_name: 'null',
-            last_name: 'null',
-            btc_address: 'null',
-            email: 'test@gmail.com',
-            phone: 'null',
-            country: 'null',
-            password: 'test@gmail.com',
-            password_confirmation: 'test@gmail.com',
+            first_name: null,
+            last_name: null,
+            btc_address: null,
+            email: null,
+            phone: null,
+            country: null,
+            password: null,
+            password_confirmation: null,
             errors: {},
 
         }
