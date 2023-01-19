@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="{{ env('APP_NAME') }} fervently supports financial independence and the freedom that Bitcoin grants users worldwide to choose participate in a permissionless, decentralized network that allows people the capacity to avoid being marginalized by authorities and financial institutions. ">
-    <meta name="author" content="{{ env(APP_URL) }}">
+    <meta name="author" content="{{ env('APP_URL') }}">
     <title>{{ env('APP_NAME') }}</title>
     <link rel="apple-touch-icon" href="logo.png">
     <link rel="shortcut icon" type="image/x-icon" href="logo.png">
@@ -98,7 +98,7 @@
                 </li>
 
                    <li class="nav-item" >
-                    <a class="nav-link" href="https://reviews.{{ env(APP_URL) }}/">Our Reviews</a>
+                    <a class="nav-link" href="https://reviews.{{ env('APP_URL') }}/">Our Reviews</a>
                 </li>
 
 
@@ -218,7 +218,7 @@
                         <div class="dark-bg-heading mb-4">
                             <h4 class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">DEPOSIT METHODS</h4>
                         </div>
-                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">{{ env('APP_NAME') }} Inc supports Bitcoin, Etheruem, Litecoin and XRP. For any other preferred payment method kindly contact support@{{ env(APP_URL) }}</p>
+                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">{{ env('APP_NAME') }} Inc supports Bitcoin, Etheruem, Litecoin and XRP. For any other preferred payment method kindly contact support@{{ env('APP_URL') }}</p>
 
                     </div>
                     <div class="col-md-12 col-lg-6 text-center">
@@ -789,7 +789,7 @@ Is {{ env('APP_NAME') }} a legitimate company?
                 </div>
                 <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">Have questions? We’re happy to help.</p>
 
-                <p class="font-medium mt-5 animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">Contact us with any questions regarding {{ env(APP_URL) }}.</p>
+                <p class="font-medium mt-5 animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">Contact us with any questions regarding {{ env('APP_URL') }}.</p>
             </div>
             <div class="row">
                 <div class="col-lg-5 col-md-12 mx-auto">
@@ -797,7 +797,7 @@ Is {{ env('APP_NAME') }} a legitimate company?
 
                         <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s">
                             <i class="ti-email"></i>
-                            <span>support@{{ env(APP_URL) }}</span>
+                            <span>support@{{ env('APP_URL') }}</span>
                         </li>
 
 
@@ -836,7 +836,7 @@ Is {{ env('APP_NAME') }} a legitimate company?
 						<img src="{{ asset('homeAsset/logo.png') }}" alt="Logo" style="width:160px">
 					</div>
 					<div class="about-text animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
-						<p class="grey-accent2">{{ env(APP_URL) }} is a blockchain platform that allows users to make payments, create and request loans and crowdfund projects.</p>
+						<p class="grey-accent2">{{ env('APP_URL') }} is a blockchain platform that allows users to make payments, create and request loans and crowdfund projects.</p>
 					</div>
 					<ul class="social-buttons list-unstyled mb-5">
 						<li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s"><a href="#" title="Facebook" class="btn font-medium"><i class="ti-facebook"></i></a></li>
@@ -873,7 +873,7 @@ Is {{ env('APP_NAME') }} a legitimate company?
 
 		</div>
 		<div class="copy-right mx-auto text-center">
-			<span class="copyright">Copyright &copy; 2022, {{ env(APP_URL) }}.</span>
+			<span class="copyright">Copyright &copy; 2022, {{ env('APP_URL') }}.</span>
 		</div>
 	</div>
 </div>
