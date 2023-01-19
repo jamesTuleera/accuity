@@ -110,7 +110,7 @@
 
                 <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0" href="{{ route('login') }}" target="_blank">Sign in</a>
           &nbsp;  &nbsp;
-                <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0" href="{{ route('login') }}" target="_blank">Sign Up</a>
+                <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0" href="{{ route('register') }}" target="_blank">Sign Up</a>
 
         </div>
     </div>
@@ -218,7 +218,7 @@
                         <div class="dark-bg-heading mb-4">
                             <h4 class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">DEPOSIT METHODS</h4>
                         </div>
-                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">{{ env('APP_NAME') }} Inc supports Bitcoin, Etheruem, Litecoin and XRP. For any other preferred payment method kindly contact support@{{ env('APP_URL') }}</p>
+                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">{{ env('APP_NAME') }} Inc supports Bitcoin, Etheruem, Litecoin and XRP. For any other preferred payment method kindly contact support@ {{ env('APP_URL') }}</p>
 
                     </div>
                     <div class="col-md-12 col-lg-6 text-center">
@@ -797,7 +797,7 @@ Is {{ env('APP_NAME') }} a legitimate company?
 
                         <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s">
                             <i class="ti-email"></i>
-                            <span>support@{{ env('APP_URL') }}</span>
+                            <span>support@ {{ env('APP_URL') }}</span>
                         </li>
 
 
