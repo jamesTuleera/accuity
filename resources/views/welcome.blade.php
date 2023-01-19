@@ -1041,7 +1041,7 @@
                                 <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.0s"><a
                                         href="#faq">Faq</a></li>
                                 <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.1s"><a
-                                        href="ndex.html#contact">Contact Us</a></li>
+                                        href="#contact">Contact Us</a></li>
                             </ul>
 
 
