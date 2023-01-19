@@ -16,6 +16,7 @@ class AdminSeeder extends Seeder
         DB::table('users')->insert([
             'first_name' => 'Admin',
             'last_name' => "Mike",
+            'role' => "222",
             'email' =>  'admin@gmail.com', //$faker->unique()->safeEmail,
             'phone' =>  '0987654321',
             'country' =>  '0987654321',
