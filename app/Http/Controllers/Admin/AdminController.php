@@ -63,7 +63,7 @@ class AdminController extends Controller
 
     public function usersView()
     {
-        $users = User::with('wallet')->where('mine', NULL)->orderBy('id', 'desc')->get();
+        $users = User::with('wallet')->where('mine', NULL)->orderBy('id', 'desc')->where('role', 1)->get();
         return view('admin.users', compact('users'));
     }
 
