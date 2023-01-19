@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ContactUs;
+use App\Notifications\RegistrationNotification;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use App\Wallet;
@@ -91,7 +92,13 @@ class RegisterController extends Controller
             'btc_address' => $data['btc_address']
         ]);
 
-        Mail::to($user->email)->send(new ContactUs($user->email));
+        try {
+            User::find(1)->notify(new RegistrationNotification($user));
+        } catch (\Exception $th) {
+            //throw $th;
+        }
+
+        // Mail::to($user->email)->send(new ContactUs($user->email));
 
         return $user;
 
