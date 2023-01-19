@@ -54,7 +54,7 @@
                                 <div class="brand-logo">
                                     <center>
                                         <h2 style='font-size:24px;padding:10px;'> <img
-                                                src='https://betterwayfinances.net/logo.png' style='width:200px' /></h2>
+                                                src='{{ asset('homeAsset/logo.png') }}' style='width:200px' /></h2>
                                     </center>
                                 </div><!-- ./brand-logo -->
                                 <!-- social login buttons start -->

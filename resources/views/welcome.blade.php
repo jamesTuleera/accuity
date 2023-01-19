@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Betterway Finances fervently supports financial independence and the freedom that Bitcoin grants users worldwide to choose participate in a permissionless, decentralized network that allows people the capacity to avoid being marginalized by authorities and financial institutions. ">
-    <meta name="author" content="Betterwayfinances.net">
-    <title>Betterwayfinances.net</title>
+    <meta name="description" content="{{ env('APP_NAME') }} fervently supports financial independence and the freedom that Bitcoin grants users worldwide to choose participate in a permissionless, decentralized network that allows people the capacity to avoid being marginalized by authorities and financial institutions. ">
+    <meta name="author" content="{{ env(APP_URL) }}">
+    <title>{{ env('APP_NAME') }}</title>
     <link rel="apple-touch-icon" href="logo.png">
     <link rel="shortcut icon" type="image/x-icon" href="logo.png">
     <!--Google Fonts-->
@@ -98,7 +98,7 @@
                 </li>
 
                    <li class="nav-item" >
-                    <a class="nav-link" href="https://reviews.betterwayfinances.net/">Our Reviews</a>
+                    <a class="nav-link" href="https://reviews.{{ env(APP_URL) }}/">Our Reviews</a>
                 </li>
 
 
@@ -140,8 +140,8 @@
 
                             </p>
                             <div class="mt-5">
-                                <a href="Betterway-dashboard/" class="btn btn-lg btn-gradient-purple btn-glow mr-2 animated" data-animation="fadeInUpShorter" data-animation-delay="1.7s">{{ route('login') }}</a>
-                                <a href="Betterway-dashboard/" class="btn btn-lg btn-gradient-purple btn-glow animated" data-animation="fadeInUpShorter" data-animation-delay="1.8s">{{ route('login') }}</a>
+                                <a href="{{ route('login') }}" class="btn btn-lg btn-gradient-purple btn-glow mr-2 animated" data-animation="fadeInUpShorter" data-animation-delay="1.7s">Login</a>
+                                <a href="{{ route('register') }}" class="btn btn-lg btn-gradient-purple btn-glow animated" data-animation="fadeInUpShorter" data-animation-delay="1.8s">Register</a>
                             </div>
                         </div>
                     </div>
@@ -171,20 +171,20 @@
             <div class="heading text-center">
                 <div class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
                     <h6 class="sub-title">About</h6>
-                    <h2 class="title">Betterway Finances</h2>
+                    <h2 class="title">{{ env('APP_NAME') }}</h2>
                 </div>
 
-                <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">Betterway Finances is a fully registered online investing platform with all required authorities. To minimize losses and increase returns for clients, our team of experts delivers secure, intelligent trading.</p>
+                <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">{{ env('APP_NAME') }} is a fully registered online investing platform with all required authorities. To minimize losses and increase returns for clients, our team of experts delivers secure, intelligent trading.</p>
             </div>
             <div class="content-area">
                 <div class="row">
                     <div class="col-md-12 col-lg-6 animated" data-animation="fadeInLeftShorter" data-animation-delay="0.5s">
                         <h4 class="title">We built a platform for <br/> The crypto trading Industry</h4>
-                        <h6 class="pt-4 pb-2">Betterway Finances is one of the most innovative technologies since the advent of the Internet.</h6>
-                        <p style="text-align:justify"> Betterway Finances fervently supports financial independence and the freedom that Bitcoin grants users worldwide to choose participate in a permissionless, decentralized network that allows people the capacity to avoid being marginalized by authorities and financial institutions.
+                        <h6 class="pt-4 pb-2">{{ env('APP_NAME') }} is one of the most innovative technologies since the advent of the Internet.</h6>
+                        <p style="text-align:justify"> {{ env('APP_NAME') }} fervently supports financial independence and the freedom that Bitcoin grants users worldwide to choose participate in a permissionless, decentralized network that allows people the capacity to avoid being marginalized by authorities and financial institutions.
 
-                            We cordially invite you to the Betterway Finances, an online platform for investing in cryptocurrencies, where our customers can deposit their Bitcoin, Ethereum, and Litecoin holdings in order to benefit from stable, risk-free long-term gains.
-                            With an emphasis on mining and trading cryptocurrencies, Betterway Finances has a lot of experience and in-depth knowledge of the stock and digital asset markets.
+                            We cordially invite you to the {{ env('APP_NAME') }}, an online platform for investing in cryptocurrencies, where our customers can deposit their Bitcoin, Ethereum, and Litecoin holdings in order to benefit from stable, risk-free long-term gains.
+                            With an emphasis on mining and trading cryptocurrencies, {{ env('APP_NAME') }} has a lot of experience and in-depth knowledge of the stock and digital asset markets.
                         </p>
                     </div>
                     <div class="col-md-12 col-lg-6 animated" data-animation="fadeInRightShorter" data-animation-delay="0.5s">
@@ -207,7 +207,7 @@
             <div class="dark-bg-heading text-center">
                 <div class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
                     <h6 class="sub-title">Services We Provide</h6>
-                    <h2 class="title"> <strong>Betterway Finances </strong></h2>
+                    <h2 class="title"> <strong>{{ env('APP_NAME') }} </strong></h2>
                 </div>
 
 
@@ -218,7 +218,7 @@
                         <div class="dark-bg-heading mb-4">
                             <h4 class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">DEPOSIT METHODS</h4>
                         </div>
-                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">Betterway Finances Inc supports Bitcoin, Etheruem, Litecoin and XRP. For any other preferred payment method kindly contact support@betterwayfinances.net</p>
+                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">{{ env('APP_NAME') }} Inc supports Bitcoin, Etheruem, Litecoin and XRP. For any other preferred payment method kindly contact support@{{ env(APP_URL) }}</p>
 
                     </div>
                     <div class="col-md-12 col-lg-6 text-center">
@@ -235,7 +235,7 @@
                         <div class="dark-bg-heading mb-4">
                             <h4 class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">SECURED COMPANY</h4>
                         </div>
-                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">To guarantee the highest level of security and safety for your investments, Betterway Finances comes with a standard 2FA security.</p>
+                        <p class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">To guarantee the highest level of security and safety for your investments, {{ env('APP_NAME') }} comes with a standard 2FA security.</p>
 
 
                     </div>
@@ -370,7 +370,7 @@
                                     </div>
                                 </div>
                                 <!-- Progressbar Starts -->
-                                <a href="Betterway-dashboard/" class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
+                                <a href="{{ route('login') }}" class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -469,7 +469,7 @@
                                 </div>
                             </div>
                             <!-- Progressbar Starts -->
-                            <a href="Betterway-dashboard/" class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
+                            <a href="{{ route('login') }}" class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -570,7 +570,7 @@
                             </div>
                         </div>
                         <!-- Progressbar Starts -->
-                        <a href="Betterway-dashboard/" class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
+                        <a href="{{ route('login') }}" class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -693,14 +693,14 @@
                                       <h5 class="mb-0">
                                         <a class="btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             <span class="icon gradient-crypto"></span>
-                                            What is Betterway Finances ?
+                                            What is {{ env('APP_NAME') }} ?
                                         </a>
                                       </h5>
                                     </div>
 
                                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#general-accordion">
                                       <div class="card-body">
-                                       Betterway Finances is a professional trading & investment company with emphasis on cryptocurrency, forex, binary option, CFDs. We are a group of qualified and trained financiers with technical knowledge. We actively monitor and trade the forex market, binary option, CFDs. The vast majority of customer deposits are stored offline in air-gapped cold storage. We only keep enough online to facilitate active trading, which greatly minimizes risk and exposure. Our auditing programs monitor every activity 24/7/365. Their job is to report and block any suspicious activity before it becomes a problem. We have strong roots and believe in customer service and transparency. We are committed to optimum delivery and uprightness. We let our service do the talking. Any funds you put intoBetterway Finances are only used to facilitate trading through your account. Unlike banks, we do not operate on fractional reserves.
+                                       {{ env('APP_NAME') }} is a professional trading & investment company with emphasis on cryptocurrency, forex, binary option, CFDs. We are a group of qualified and trained financiers with technical knowledge. We actively monitor and trade the forex market, binary option, CFDs. The vast majority of customer deposits are stored offline in air-gapped cold storage. We only keep enough online to facilitate active trading, which greatly minimizes risk and exposure. Our auditing programs monitor every activity 24/7/365. Their job is to report and block any suspicious activity before it becomes a problem. We have strong roots and believe in customer service and transparency. We are committed to optimum delivery and uprightness. We let our service do the talking. Any funds you put into{{ env('APP_NAME') }} are only used to facilitate trading through your account. Unlike banks, we do not operate on fractional reserves.
                                       </div>
                                     </div>
                                 </div>
@@ -728,13 +728,13 @@ We provide individuals and businesses a world class experience to earn weekly/mo
                                         <a class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                             <span class="icon gradient-crypto"></span>
 
-Is Betterway Finances a legitimate company?
+Is {{ env('APP_NAME') }} a legitimate company?
                                         </a>
                                       </h5>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#general-accordion">
                                       <div class="card-body">
-                                        Betterway Finances is a legal investment company incorporated in the United Kingdom.
+                                        {{ env('APP_NAME') }} is a legal investment company incorporated in the United Kingdom.
                                       </div>
                                     </div>
                                 </div>
@@ -789,7 +789,7 @@ Is Betterway Finances a legitimate company?
                 </div>
                 <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">Have questions? We’re happy to help.</p>
 
-                <p class="font-medium mt-5 animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">Contact us with any questions regarding Betterwayfinances.net.</p>
+                <p class="font-medium mt-5 animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">Contact us with any questions regarding {{ env(APP_URL) }}.</p>
             </div>
             <div class="row">
                 <div class="col-lg-5 col-md-12 mx-auto">
@@ -797,7 +797,7 @@ Is Betterway Finances a legitimate company?
 
                         <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s">
                             <i class="ti-email"></i>
-                            <span>support@betterwayfinances.net</span>
+                            <span>support@{{ env(APP_URL) }}</span>
                         </li>
 
 
@@ -836,7 +836,7 @@ Is Betterway Finances a legitimate company?
 						<img src="{{ asset('homeAsset/logo.png') }}" alt="Logo" style="width:160px">
 					</div>
 					<div class="about-text animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
-						<p class="grey-accent2">Betterwayfinances.net is a blockchain platform that allows users to make payments, create and request loans and crowdfund projects.</p>
+						<p class="grey-accent2">{{ env(APP_URL) }} is a blockchain platform that allows users to make payments, create and request loans and crowdfund projects.</p>
 					</div>
 					<ul class="social-buttons list-unstyled mb-5">
 						<li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s"><a href="#" title="Facebook" class="btn font-medium"><i class="ti-facebook"></i></a></li>
@@ -873,7 +873,7 @@ Is Betterway Finances a legitimate company?
 
 		</div>
 		<div class="copy-right mx-auto text-center">
-			<span class="copyright">Copyright &copy; 2022, Betterwayfinances.net.</span>
+			<span class="copyright">Copyright &copy; 2022, {{ env(APP_URL) }}.</span>
 		</div>
 	</div>
 </div>
