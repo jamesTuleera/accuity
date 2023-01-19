@@ -21,8 +21,8 @@
                             </div>
                             <div class="col-7 col-stats">
                                 <div class="numbers">
-                                    <p class="card-category">Balance</p>
-                                    <h4 class="card-title text-light">${{ number_format(Auth::user()->wallet->balance) }}.00</h4> <br>
+                                    <p class="card-category">Total users</p>
+                                    <h4 class="card-title text-light">{{ Auth::user()->count() }}</h4> <br>
 
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                             <div class="col-7 col-stats">
                                 <div class="numbers">
                                     <p class="card-category">Investment</p>
-                                    <h4 class="card-title text-light">$ {{ number_format(Auth::user()->wallet->investment) }}.00</h4>
+                                    <h4 class="card-title text-light">$900.00</h4>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                             <div class="col-7 col-stats">
                                 <div class="numbers">
                                     <p class="card-category">Profit</p>
-                                    <h4 class="card-title text-light">${{ number_format(Auth::user()->wallet->profit) }}.00</h4>
+                                    <h4 class="card-title text-light">$1,223.00</h4>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                             <div class="col-7 col-stats">
                                 <div class="numbers">
                                     <p class="card-category">Bonus</p>
-                                    <h4 class="card-title text-light">${{ number_format(Auth::user()->wallet->bonus) }}.00</h4>
+                                    <h4 class="card-title text-light">$234.00</h4>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                             <div class="col-7 col-stats">
                                 <div class="numbers">
                                     <p class="card-category">Ref. Bonus</p>
-                                    <h4 class="card-title text-light">${{ number_format(Auth::user()->wallet->ref_bonus) }}.00</h4>
+                                    <h4 class="card-title text-light">$7,832.00</h4>
                                 </div>
                             </div>
                         </div>
