@@ -74,6 +74,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // s
         $user = User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -93,6 +94,13 @@ class RegisterController extends Controller
         Mail::to($user->email)->send(new ContactUs($user->email));
 
         return $user;
+
+        // return response()->json([
+        //     'status' => true,
+        //     'data' => $user,
+        //     'message' => 'Your registration was successful'
+        // ]);
+
     }
 }
 

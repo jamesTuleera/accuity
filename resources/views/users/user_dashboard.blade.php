@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3 d-none">
+            <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="card card-stats card-round bg-dark">
                     <div class="card-body ">
                         <div class="row">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3 d-none">
+            <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="card card-stats card-round bg-dark">
                     <div class="card-body ">
                         <div class="row">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3 d-none">
+            <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="card card-stats card-round bg-dark">
                     <div class="card-body">
                         <div class="row">

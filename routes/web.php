@@ -23,9 +23,15 @@ Route::get('/about-us', 'PublicController@about')->name('about');
 Route::get('/contact-us', 'PublicController@contactView')->name('contact');
 Route::get('/countries', 'UtilityController@countries');
 
-Auth::routes();
 
+Auth::routes();
+Route::get('/auth-user', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/auth-user', function(){
+//     dd('yes');
+// });
+
+
 
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/user-profile', 'UserController@profileView')->name('users.profile');
@@ -64,11 +70,3 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']],  function
     Route::GET('/{did}/delete-admin-wallets', 'Admin\AdminWalletController@delete')->name('admin.delete_admin_wallet');
     Route::GET('/delete/{type}/{user_id}', 'Admin\AdminController@deleteUser')->name('admin.delete_user');
 });
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -2,7 +2,7 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="dark">
         <a href="/" class="logo" style="font-size: 27px; color:#fff;">
-            Pythagon
+            {{ env('APP_NAME') }}
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
             data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">

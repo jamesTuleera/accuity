@@ -1,80 +1,154 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
-    <meta charset="utf-8">
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Metas
+  ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Auth </title>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="logo.png" />
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link rel="stylesheet" href="{{ asset('auth/css/login7-style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
 </head>
-<body>
+
+
+<body style="background-image: linear-gradient(#305082, #EF5067);">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
 
-                    </ul>
+        <div id="google_translate_element"></div>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                }, 'google_translate_element');
+            }
+        </script>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div
+                    class="authfy-container col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
+                    <div class="col-sm-5 authfy-panel-left" style="background-color:#272F3D">
+                        <div class="brand-col">
+                            <div class="headline">
+                                <!-- brand-logo start -->
+                                <div class="brand-logo">
+                                    <center>
+                                        <h2 style='font-size:24px;padding:10px;'> <img
+                                                src='https://betterwayfinances.net/logo.png' style='width:200px' /></h2>
+                                    </center>
+                                </div><!-- ./brand-logo -->
+                                <!-- social login buttons start -->
+                                <div class="row social-buttons">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                        <a href="../" class="btn btn-block btn-facebook"
+                                            style="background-color:#fff;color:#FF4444">
+                                            <center>
+                                                {{-- <p>{{ route('register') }}</p> --}}
+                                                <i class="fa fa-home"></i> <span class="">Back To Homepage</span>
+                                            </center>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                        @if (Route::currentRouteName() == 'register')
+                                        <a href="{{ route('login') }}" data-panel=".panel-signup" href="#"
+                                        class="btn btn-block btn-facebook lnk-toggler"
+                                        style="background-color:#FF4444;color:white;font-weight:bolder">
+                                        <center>
+                                            <i class="fa fa-reg"></i> <span class="">Login Now</span>
+                                        </center>
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                                    @else
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+                                    <a href="{{ route('register') }}" data-panel=".panel-signup" href="#"
+                                            class="btn btn-block btn-facebook lnk-toggler"
+                                            style="background-color:#FF4444;color:white;font-weight:bolder">
+                                            <center>
+                                                <i class="fa fa-reg"></i> <span class="">Register Now</span>
+                                            </center>
+                                        </a>
+                                        @endif
+
+                                    </div>
+
+                                </div><!-- ./social-buttons -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 authfy-panel-right" style="overflow:auto">
+                        <div class="authfy-login" style="overflow:auto">
+                            <!-- panel-signup start -->
+                            <div class=" panel-signup text-center " style="overflow:auto">
+                                <div class="row" style="overflow:auto">
+                                    <div class="col-xs-12 col-sm-12" style="overflow:auto">
+
+
+
+
+
+                                        @yield('content')
+
+
+
+
+
+                                        <a class="lnk-toggler" data-panel=".panel-login" href="#"
+                                            style="color:#FF4444;font-weight:bolder">Already have an Account ?</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- ./authfy-login -->
+                    </div>
+                </div>
+            </div> <!-- ./row -->
+        </div> <!-- ./container -->
     </div>
+    <!-- Javascript Files -->
+
+    <!-- initialize jQuery Library -->
+    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset('auth/js/jquery-2.2.4.min.js') }}"></script>
+
+
+    <!-- for Bootstrap js -->
+    <script src="{{ asset('auth/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('user/js/sweet.js') }}"></script>
+
+    {{-- <script>
+        swal({
+        title: 'Failed',
+        text: 'res.message',
+        icon: 'error'
+    })
+    </script> --}}
+
+
 </body>
+
+
 </html>

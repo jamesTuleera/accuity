@@ -14,20 +14,20 @@
     <!--Font icons-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/fonts/themify/style.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/fonts/flag-icon-css/css/flag-icon.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/vendors/animate/animate.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/vendors/flipclock/flipclock.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/vendors/swiper/css/swiper.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/fonts/themify/style.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/fonts/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/vendors/animate/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/vendors/flipclock/flipclock.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/vendors/swiper/css/swiper.min.css') }}">
     <!-- END VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/css/demo.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/css/demo.min.css') }}">
     <!-- END CRYPTO CSS-->
     <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/theme-assets/css/template-3d-graphics.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/theme-assets/css/template-3d-graphics.min.css') }}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeAsset/assets/css/style.css') }}">
     <!-- END Custom CSS-->
   </head>
   <body class=" 1-column   page-animated template-3g-graphics" data-menu-open="hover" data-menu="">
@@ -71,7 +71,7 @@
     <header class="page-header">
       <!-- Horizontal Menu Start-->
       <nav class="main-menu static-top navbar-dark navbar navbar-expand-lg fixed-top mb-1"><div class="container">
-    <a class="navbar-brand animated" data-animation="fadeInDown" data-animation-delay="1s" href="#head-area"><img src="{{ asset('home/logo.png') }}" alt="Crypto Logo" style="width: 170px;"/></a>
+    <a class="navbar-brand animated" data-animation="fadeInDown" data-animation-delay="1s" href="#head-area"><img src="{{ asset('homeAsset/logo.png') }}" alt="Crypto Logo" style="width: 170px;"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -147,7 +147,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 move-first">
                         <div class="crypto-3d-graphic animated" data-animation="fadeInUpShorter" data-animation-delay="1.7s">
-                            <img src="{{ asset('home/theme-assets/images-3d-graphics/banner-graphic.png') }}" class="graphic-3d-img mx-auto d-block" alt="CICO">
+                            <img src="{{ asset('homeAsset/theme-assets/images-3d-graphics/banner-graphic.png') }}" class="graphic-3d-img mx-auto d-block" alt="CICO">
                         </div>
                     </div>
                 </div>
@@ -222,14 +222,14 @@
 
                     </div>
                     <div class="col-md-12 col-lg-6 text-center">
-                        <img src="{{ asset('home/theme-assets/images-3d-graphics/problems-graphic.png') }}" class="problems-img animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" alt="problems-graphic">
+                        <img src="{{ asset('homeAsset/theme-assets/images-3d-graphics/problems-graphic.png') }}" class="problems-img animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" alt="problems-graphic">
                     </div>
                 </div>
             </div>
             <div class="solutions mt-5">
                 <div class="row">
                     <div class="col-md-12 col-lg-6 text-center">
-                        <img src="{{ asset('home/theme-assets/images-3d-graphics/solutions-graphic.png') }}" class="solutions-img animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" alt="problems-graphic">
+                        <img src="{{ asset('homeAsset/theme-assets/images-3d-graphics/solutions-graphic.png') }}" class="solutions-img animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" alt="problems-graphic">
                     </div>
                     <div class="col-md-12 col-lg-6 move-first">
                         <div class="dark-bg-heading mb-4">
@@ -309,7 +309,7 @@
                                             <h4 style="text-align:center;font-size:15px;color:black"
                                                 class="elementor-heading-title elementor-size-default">
                                                         <center>
-                                <img src='{{ asset('home/b.png') }}' style='width:20px;border:2px solid floralwhite;border-radius: 100%;'>
+                                <img src='{{ asset('homeAsset/b.png') }}' style='width:20px;border:2px solid floralwhite;border-radius: 100%;'>
                                 </center>
                                  <br>
                                                 <b>Minimum Deposit</b> <i style='color:black;font-weight:bolder'> - </i> $1,000</h4>
@@ -408,7 +408,7 @@
                                         <h4 style="text-align:center;font-size:15px;color:black"
                                             class="elementor-heading-title elementor-size-default">
                                                     <center>
-                            <img src='{{ asset('home/b.png') }}' style='width:20px;border:2px solid floralwhite;border-radius: 100%;'>
+                            <img src='{{ asset('homeAsset/b.png') }}' style='width:20px;border:2px solid floralwhite;border-radius: 100%;'>
                             </center>
                              <br>
                                             <b>Minimum Deposit</b> <i style='color:black;font-weight:bolder'> - </i> $10,000</h4>
@@ -509,7 +509,7 @@
                                     <h4 style="text-align:center;font-size:15px;color:black"
                                         class="elementor-heading-title elementor-size-default">
                                                 <center>
-                        <img src='{{ asset('home/b.png') }}' style='width:20px;border:2px solid floralwhite;border-radius: 100%;'>
+                        <img src='{{ asset('homeAsset/b.png') }}' style='width:20px;border:2px solid floralwhite;border-radius: 100%;'>
                         </center>
                         <br>
                                         <b>Minimum Deposit</b> <i style='color:black;font-weight:bolder'> - </i> $50,000</h4>
@@ -833,7 +833,7 @@ Is Betterway Finances a legitimate company?
 			<div class="col-md-4">
 				<div class="about">
 					<div class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">
-						<img src="{{ asset('home/logo.png') }}" alt="Logo" style="width:160px">
+						<img src="{{ asset('homeAsset/logo.png') }}" alt="Logo" style="width:160px">
 					</div>
 					<div class="about-text animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
 						<p class="grey-accent2">Betterwayfinances.net is a blockchain platform that allows users to make payments, create and request loans and crowdfund projects.</p>
@@ -882,20 +882,20 @@ Is Betterway Finances a legitimate company?
 {{-- <script src="https://code.tidio.co/qhpaglknvvhnj0tb3dngbxfed8q9gzsb.js" async></script> --}}
 
     <!-- BEGIN VENDOR JS-->
-    <script src="{{ asset('home/theme-assets/vendors/vendors.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/vendors/vendors.min.js')}}"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="{{ asset('home/theme-assets/vendors/flipclock/flipclock.min.js')}}"></script>
-    <script src="{{ asset('home/theme-assets/vendors/swiper/js/swiper.min.js')}}"></script>
-    <script src="{{ asset('home/theme-assets/vendors/particles.min.js')}}"></script>
-    <script src="{{ asset('home/theme-assets/vendors/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/vendors/flipclock/flipclock.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/vendors/swiper/js/swiper.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/vendors/particles.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/vendors/waypoints/jquery.waypoints.min.js')}}"></script>
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN THEME JS-->
-    <script src="{{ asset('home/theme-assets/js/theme.min.js')}}"></script>
-    <script src="{{ asset('home/theme-assets/js/scripts/demo.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/js/theme.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/js/scripts/demo.min.js')}}"></script>
     <!-- END CRYPTO JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="{{ asset('home/theme-assets/js/scripts/particles-type1.min.js')}}"></script>
+    <script src="{{ asset('homeAsset/theme-assets/js/scripts/particles-type1.min.js')}}"></script>
     <!-- END PAGE LEVEL JS-->
   </body>
 

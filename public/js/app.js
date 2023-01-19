@@ -1908,11 +1908,14 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_loading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/loading.js */ "./resources/js/utilities/loading.js");
+/* harmony import */ var process__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! process */ "./node_modules/process/browser.js");
+/* harmony import */ var process__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(process__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+// import { utilitiesMixin } from "../utilities/loading.js"
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1921,10 +1924,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       isSuccess: false,
       countries: null,
       isDisabled: false,
-      account_number: null,
-      bank_id: null,
-      errors: null,
-      user: []
+      ref_email: null,
+      first_name: 'null',
+      last_name: 'null',
+      btc_address: 'null',
+      email: 'test@gmail.com',
+      phone: 'null',
+      country: 'null',
+      password: 'test@gmail.com',
+      password_confirmation: 'test@gmail.com',
+      errors: {}
     };
   },
   mounted: function mounted() {
@@ -1941,7 +1950,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 0:
               _context.next = 2;
               return axios.get('/countries').then(function (response) {
-                // console.log(response.data.message)
                 _this.countries = response.data.message;
               });
             case 2:
@@ -1952,22 +1960,61 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     signup: function signup() {
-      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-          while (1) switch (_context2.prev = _context2.next) {
-            case 0:
-              _context2.next = 2;
-              return axios.post('/register', {
-                name: "James"
-              }).then(function (response) {
-                console.log(response.data);
-              });
-            case 2:
-            case "end":
-              return _context2.stop();
-          }
-        }, _callee2);
-      }))();
+      var _this2 = this;
+      this.isDisabled = true;
+      this.isLoading = true;
+      this.errors = {};
+      // try {
+      axios.post('/register', {
+        btc_address: this.btc_address,
+        country: this.country,
+        email: this.email,
+        first_name: this.first_name,
+        last_name: this.last_name,
+        password: this.password,
+        phone: this.phone,
+        ref_email: null,
+        password_confirmation: this.password_confirmation
+      }).then(function (response) {
+        // console.log(response.data)
+        var res = response.data;
+        // if (response.data.status == true) {
+        //     swal({
+        //         title: res.status == true ? 'Successful' : 'Failed',
+        //         text: res.message,
+        //         icon: res.status === true ? 'success' : 'error'
+        //     })
+        //     window.location = '/auth-user'
+        // }
+        window.location = '/home';
+      })["catch"](function (_ref) {
+        var response = _ref.response;
+        if (response.status === 422) {
+          _this2.errors = response.data.errors;
+          console.log(_this2.errors + "  " + _this2.isSuccess);
+        }
+        if (e.response.status == 500) {
+          swal({
+            title: 'Failed',
+            text: 'Internal Server Error',
+            icon: 'error'
+          });
+        }
+        if (e.response.status == 419) {
+          window.location.reload();
+        }
+      })["finally"](function () {
+        _this2.isDisabled = false;
+        _this2.isLoading = false;
+      });
+
+      // } catch (error) {
+      //     if(error.response.status == 422){
+      //         this.errors = error.response.errors;
+      //         console.log(this.errors + "  "+ this.isSuccess)
+      //     }
+
+      // }
     }
   }
 });
@@ -1988,40 +2035,265 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_vm._m(0), _vm._v(" "), _c("form", {
+  return _c("div", {
+    staticStyle: {
+      overflow: "auto"
+    }
+  }, [_vm._m(0), _vm._v(" "), _c("form", {
+    staticStyle: {
+      overflow: "auto"
+    },
     on: {
       submit: function submit($event) {
         $event.preventDefault();
-        return _vm.fillData.apply(null, arguments);
-      }
-    }
-  }, [_vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("Select", {
-    staticClass: "form-control",
-    attrs: {
-      name: "coun"
-    }
-  }, [_c("option", [_vm._v("Select Country")]), _vm._v(" "), _vm._l(_vm.countries, function (country) {
-    return _c("option", [_vm._v(_vm._s(country))]);
-  })], 2)], 1), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _vm._m(6), _vm._v(" "), _vm._m(7), _vm._v(" "), _vm._m(8), _vm._v(" "), _vm._m(9), _vm._v(" "), _c("div", {
-    staticClass: "form-group"
-  }, [_c("button", {
-    staticClass: "btn btn-lg btn-primary btn-block",
-    staticStyle: {
-      "background-color": "#ff4444",
-      border: "none"
-    },
-    attrs: {
-      name: "reg",
-      type: "submit"
-    },
-    on: {
-      click: function click($event) {
         return _vm.signup();
       }
     }
-  }, [_vm._v("\n                Sign Up Now\n            ")])])])]);
+  }, [_c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.first_name,
+      expression: "first_name"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      required: "",
+      type: "text",
+      placeholder: "Full name"
+    },
+    domProps: {
+      value: _vm.first_name
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.first_name = $event.target.value;
+      }
+    }
+  }), _vm._v(" "), _c("span", {
+    staticClass: "focus-input"
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.last_name,
+      expression: "last_name"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      required: "",
+      type: "text",
+      placeholder: "Last name"
+    },
+    domProps: {
+      value: _vm.last_name
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.last_name = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.email,
+      expression: "email"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      required: "",
+      type: "email",
+      placeholder: "Email address"
+    },
+    domProps: {
+      value: _vm.email
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.email = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.phone,
+      expression: "phone"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      required: "",
+      type: "text",
+      placeholder: "Mobile Number"
+    },
+    domProps: {
+      value: _vm.phone
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.phone = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("Select", {
+    staticClass: "form-control",
+    model: {
+      value: _vm.country,
+      callback: function callback($$v) {
+        _vm.country = $$v;
+      },
+      expression: "country"
+    }
+  }, [_c("option", [_vm._v("Select Country")]), _vm._v(" "), _vm._l(_vm.countries, function (country) {
+    return _c("option", [_vm._v(_vm._s(country))]);
+  })], 2)], 1), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.btc_address,
+      expression: "btc_address"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      required: "",
+      type: "text",
+      placeholder: "BTC address"
+    },
+    domProps: {
+      value: _vm.btc_address
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.btc_address = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.ref_email,
+      expression: "ref_email"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      name: "ref",
+      placeholder: "Referral email"
+    },
+    domProps: {
+      value: _vm.ref_email
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.ref_email = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.password,
+      expression: "password"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      required: "",
+      type: "password",
+      placeholder: "Password"
+    },
+    domProps: {
+      value: _vm.password
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.password = $event.target.value;
+      }
+    }
+  }), _vm._v(" "), _c("span", {
+    staticClass: "focus-input"
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group wrap-input"
+  }, [_c("div", {}, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.password_confirmation,
+      expression: "password_confirmation"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      required: "",
+      type: "password",
+      placeholder: "Confirm Password"
+    },
+    domProps: {
+      value: _vm.password_confirmation
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.password_confirmation = $event.target.value;
+      }
+    }
+  }), _vm._v(" "), _c("span", {
+    staticClass: "focus-input"
+  })])]), _vm._v(" "), _vm.errors ? _c("div", _vm._l(_vm.errors, function (v, k) {
+    return _c("div", {
+      key: k,
+      staticClass: "mb-4 shadow-lg py-2 px-4 pr-0",
+      staticStyle: {
+        "background-color": "red",
+        color: "white",
+        "border-radius": "5px",
+        margin: "5px",
+        padding: "3"
+      }
+    }, _vm._l(v, function (error) {
+      return _c("small", {
+        key: error,
+        staticClass: "text-sm",
+        staticStyle: {
+          color: "white"
+        }
+      }, [_vm._v("\n                " + _vm._s(error) + "\n              ")]);
+    }), 0);
+  }), 0) : _vm._e(), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "form-group"
+  }, [_c("button", {
+    staticClass: "mt-2 btn btn-block btn-lg btn-primary",
+    staticStyle: {
+      "background-color": "navy",
+      border: "none"
+    },
+    attrs: {
+      disabled: _vm.isDisabled
+    }
+  }, [_vm.isLoading ? _c("div", {
+    staticClass: "spinner-grow spinner-grow-sm text-light"
+  }) : _vm._e(), _vm._v(" "), _c("span", [_vm._v(" " + _vm._s(_vm.isLoading ? " Loading..." : "Sign Up"))])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -2029,145 +2301,8 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "authfy-heading"
   }, [_c("h3", {
-    staticClass: "auth-title",
-    staticStyle: {
-      color: "navy"
-    }
-  }, [_vm._v("Sign up for free! ...")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "text",
-      name: "fulln",
-      placeholder: "Full name"
-    }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "focus-input"
-  })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "email",
-      name: "em",
-      placeholder: "Email address"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "text",
-      name: "ph",
-      placeholder: "Mobile Number"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("select", {
-    staticClass: "form-control",
-    attrs: {
-      name: "cur"
-    }
-  }, [_c("option", {
-    attrs: {
-      selected: "",
-      disabled: ""
-    }
-  }, [_vm._v("Choose Currency")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "$"
-    }
-  }, [_vm._v("US Dollar")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "€"
-    }
-  }, [_vm._v("Euro")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "£"
-    }
-  }, [_vm._v("British Pound Sterling")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "text",
-      name: "occu",
-      placeholder: "Occupation"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "text",
-      readonly: "",
-      name: "ref",
-      value: "No Referral"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("div", {
-    staticClass: "pwdMask"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "password",
-      name: "pw",
-      placeholder: "Password"
-    }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "focus-input"
-  }), _vm._v(" "), _c("span", {
-    staticClass: "fa fa-eye-slash pwd-toggle"
-  })])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "form-group wrap-input"
-  }, [_c("div", {
-    staticClass: "pwdMask"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "password",
-      name: "cpw",
-      placeholder: "Confirm Password"
-    }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "focus-input"
-  }), _vm._v(" "), _c("span", {
-    staticClass: "fa fa-eye-slash pwd-toggle"
-  })])]);
+    staticClass: "text-warning"
+  }, [_vm._v("Sign up for free")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -2178,20 +2313,21 @@ var staticRenderFns = [function () {
       "float": "left"
     },
     attrs: {
-      type: "checkbox"
+      type: "checkbox",
+      required: ""
     }
   }), _vm._v(" "), _c("p", {
     staticClass: "term-policy text-muted small"
   }, [_vm._v("\n                I agree to the\n                "), _c("a", {
     staticStyle: {
-      color: "#ff4444"
+      color: "navy"
     },
     attrs: {
       href: "#"
     }
   }, [_vm._v("privacy policy")]), _vm._v(" and\n                "), _c("a", {
     staticStyle: {
-      color: "#ff4444"
+      color: "navy"
     },
     attrs: {
       href: "#"
@@ -50043,53 +50179,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/utilities/loading.js":
-/*!*******************************************!*\
-  !*** ./resources/js/utilities/loading.js ***!
-  \*******************************************/
-/*! exports provided: utilitiesMixin */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "utilitiesMixin", function() { return utilitiesMixin; });
-var utilitiesMixin = {
-  data: function data() {
-    return {
-      errorMessage: '',
-      errorBag: [],
-      loading: false,
-      spinClass: {
-        fa: true,
-        "fa-check-circle-o": true,
-        "fa-spin": false,
-        "fa-spinner": false
-      },
-      sliderOptions: SLIDER_OPTIONS
-    };
-  },
-  methods: {
-    startLoading: function startLoading() {
-      console.log('starting loading');
-      this.errorMessage = '';
-      this.errorBag.splice(0, this.errorBag.length);
-      this.loading = true;
-      this.spinClass['fa-spinner'] = true;
-      this.spinClass['fa-spin'] = true;
-      this.spinClass['fa-check-circle-o'] = false;
-    },
-    stopLoading: function stopLoading() {
-      console.log('stopping loading');
-      this.loading = false;
-      this.spinClass['fa-spinner'] = false;
-      this.spinClass['fa-spin'] = false;
-      this.spinClass['fa-check-circle-o'] = true;
-    }
-  }
-};
 
 /***/ }),
 
