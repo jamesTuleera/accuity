@@ -1987,8 +1987,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         //     window.location = '/auth-user'
         // }
         window.location = '/home';
-      })["catch"](function (_ref) {
-        var response = _ref.response;
+      })["catch"](function (response) {
         if (response.status === 422) {
           _this2.errors = response.data.errors;
           console.log(_this2.errors + "  " + _this2.isSuccess);
@@ -1999,6 +1998,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             text: 'Internal Server Error',
             icon: 'error'
           });
+          alert('Internal server error');
         }
         if (e.response.status == 419) {
           window.location.reload();

@@ -198,7 +198,7 @@ export default {
                 //     window.location = '/auth-user'
                 // }
                 window.location = '/home'
-            }).catch(({ response }) => {
+            }).catch((response) => {
                 if (response.status === 422) {
                     this.errors = response.data.errors;
                     console.log(this.errors + "  " + this.isSuccess)
@@ -210,6 +210,8 @@ export default {
                         text: 'Internal Server Error',
                         icon: 'error'
                     })
+
+                    alert('Internal server error')
                 }
 
                 if (e.response.status == 419) {

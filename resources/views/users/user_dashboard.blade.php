@@ -10,7 +10,7 @@
 
         <!-- Beginning of  Dashboard Stats  -->
         <div class="row row-card-no-pd bg-dark shadow-lg">
-            <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="col-sm-6 col-md-6 col-lg-6 d-none">
                 <div class="card card-stats card-round bg-dark">
                     <div class="card-body ">
                         <div class="row">
