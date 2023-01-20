@@ -2,7 +2,7 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="dark">
         <a href="/" class="logo" style="font-size: 27px; color:#fff;">
-            {{ env('APP_NAME') }}
+            {{ Str::limit(env('APP_NAME'), 9) }}
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
             data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,11 +44,11 @@
                         <div class="dropdown-user-scroll scrollbar-outer">
                             <li>
                                 <a class="dropdown-item"
-                                    href="https://Bitfinex Options.com/dashboard/changepassword">Change
+                                    href="{{ route('users.changepassword') }}">Change
                                     Password</a>
-                                <a class="dropdown-item"
-                                    href="https://Bitfinex Options.com/dashboard/profile">Update
-                                    Account</a>
+                                <!--<a class="dropdown-item"-->
+                                <!--    href="https://Bitfinex Options.com/dashboard/profile">Update-->
+                                <!--    Account</a>-->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#"
                                     onclick="event.preventDefault();
@@ -94,18 +94,18 @@
                         <p>Set wallets</p>
                     </a>
                 </li>
+                <li class="nav-item {{Route::currentRouteName() == 'admin.plans' ? 'active text-dark' : ''}}">
+                    <a href="{{route('admin.plans')}}">
+                        <i class="fa fa-th " aria-hidden="true"></i>
+                        <p> Plans</p>
+                    </a>
+                </li>
                 <li class="nav-item {{Route::currentRouteName() == 'admin.deposits' ? 'active text-dark' : ''}}">
                     <a href="{{route('admin.deposits')}}">
                         <i class="fa fa-th " aria-hidden="true"></i>
-                        <p>Add Plans</p>
+                        <p>Confirm payment</p>
                     </a>
                 </li>
-                <!--<li class="nav-item {{Route::currentRouteName() == 'admin.deposits' ? 'active text-dark' : ''}}">-->
-                <!--    <a href="{{route('admin.deposits')}}">-->
-                <!--        <i class="fa fa-th " aria-hidden="true"></i>-->
-                <!--        <p>Confirm payment</p>-->
-                <!--    </a>-->
-                <!--</li>-->
                 <li class="nav-item {{Route::currentRouteName() == 'admin.withdrawal_request' ? 'active text-dark' : ''}}">
                     <a href="{{route('admin.withdrawal_request')}}">
                         <i class="fa fa-life-ring" aria-hidden="true"></i>
@@ -118,7 +118,8 @@
                         <p>Pay ROI</p>
                     </a>
                 </li>
-                <li class="nav-item" onclick="logout()">
+                <li class="nav-item" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
                     <a href="#">
                         <i class="fa fa-life-ring" aria-hidden="true"></i>
                         <p>Logout</p>

@@ -21,22 +21,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PublicController@welcome')->name('welcome');
 Route::get('/about-us', 'PublicController@about')->name('about');
 Route::get('/contact-us', 'PublicController@contactView')->name('contact');
-Route::get('/countries', 'UtilityController@countries');
-
 
 Auth::routes();
-Route::get('/auth-user', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/auth-user', function(){
-//     dd('yes');
-// });
-
-
 
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/user-profile', 'UserController@profileView')->name('users.profile');
+    Route::get('/user-profile-store', 'UserController@profileViewS')->name('users.profile.store');
     Route::get('/change-password', 'UserController@passwordView')->name('users.changepassword');
     Route::post('/update-password', 'UserController@updatePass')->name('users.updatepass');
+    Route::get('/payment-details', 'UserController@detailsView')->name('users.payment-details');
+    Route::post('/load-payment-details', 'UserController@createUserDetails')->name('users.add-details');
 });
 
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'user']],  function() {
@@ -69,4 +64,20 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']],  function
     Route::POST('/debit-admin-wallets', 'Admin\BalanceController@debit')->name('admin.debiting');
     Route::GET('/{did}/delete-admin-wallets', 'Admin\AdminWalletController@delete')->name('admin.delete_admin_wallet');
     Route::GET('/delete/{type}/{user_id}', 'Admin\AdminController@deleteUser')->name('admin.delete_user');
+
+
+    Route::group(['prefix' =>'plans'], function(){
+        Route::GET('/', 'Admin\PlansController@index')->name('admin.plans');
+        Route::POST('/add', 'Admin\PlansController@add')->name('admin.add_plans');
+        Route::GET('/delete/{id}', 'Admin\PlansController@delete')->name('admin.delete_plans');
+        Route::POST('/edit', 'Admin\PlansController@edit')->name('admin.edit_plans');
+    });
+
+    Route::get('/users/{id}', 'Admin\AdminController@userDetails')->name('admin.user-details');
+
+
 });
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

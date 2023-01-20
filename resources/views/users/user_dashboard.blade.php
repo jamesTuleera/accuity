@@ -114,6 +114,19 @@
 
         <div class="row mb-5">
 
+            @foreach ($plans as $plan)
+            <div class="col-lg-3 p-4 card bg-dark shadow-lg">
+                <div class="pricing-table purple border bg-dark shadow-lg">
+                    <h3 class='text-light d-flex justify-content-between'><span>Invest:</span> <span>${{ $plan->invest }}</span></h3><hr class='bg-light'>
+                    <h3 class='text-light d-flex justify-content-between'><span>Returns:</span> <span>${{ $plan->returns }}</span></h3><hr class='bg-light mt-3'>
+                    <div class="">
+                        <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;" href="{{route('users.deposit')}}">Deposit</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+
 {{--
             <div class="col-lg-3 p-4 card bg-dark shadow-lg">
                 <div class="pricing-table purple border bg-dark shadow-lg">
