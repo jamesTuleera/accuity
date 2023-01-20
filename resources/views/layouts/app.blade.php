@@ -43,11 +43,11 @@
         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
         </script>
 
-        <div class="container-fluid">
+        <div class="container-fluid" style="max-height: 900px">
             <div class="row">
                 <div
                     class="authfy-container col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
-                    <div class="col-sm-5 authfy-panel-left" style="background-color:#272F3D">
+                    <div class="col-sm-5 authfy--left" style="background-color:none">
                         <div class="brand-col">
                             <div class="headline">
                                 <!-- brand-logo start -->
@@ -99,12 +99,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-7 authfy-panel-right" style="overflow:auto">
-                        <div class="authfy-login" style="overflow:auto">
+                    <div class="col-sm-7 authfy-panel-right" >
+                        <div class="-login" style="overflow:auto" >
                             <!-- panel-signup start -->
-                            <div class=" panel-signup text-center " style="overflow:auto">
-                                <div class="row" style="overflow:auto">
-                                    <div class="col-xs-12 col-sm-12" style="overflow:auto">
+                            <div class=" panel-signup text-center ">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
 
 
 
@@ -116,7 +116,7 @@
 
 
 
-                                        <a class="lnk-toggler" data-panel=".panel-login" href="#"
+                                        <a class="lnk-toggler" data-panel=".panel-login" href="{{ route('login') }}"
                                             style="color:#FF4444;font-weight:bolder">Already have an Account ?</a>
 
                                     </div>
