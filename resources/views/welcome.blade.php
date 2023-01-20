@@ -1062,8 +1062,7 @@
         </div>
     </footer>
 
-    {{-- <script src="https://code.tidio.co/qhpaglknvvhnj0tb3dngbxfed8q9gzsb.js" async></script> --}}
-
+@include('layouts.component/chat')
     <!-- BEGIN VENDOR JS-->
     <script src="{{ asset('homeAsset/theme-assets/vendors/vendors.min.js') }}"></script>
     <!-- BEGIN VENDOR JS-->

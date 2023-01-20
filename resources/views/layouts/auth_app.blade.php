@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="UWpmQWTFJvzCehfXh1DfbdOHB1izM4CN4AtffwHg">
 
-    <title>{{env('APP_NAME')}} | User panel</title>
+    <title>{{ env('APP_NAME') }} | User panel</title>
     <link rel="icon" href="/cloud/app/images/minfavico.png" type="image/png" />
 
     <!-- Fonts and icons -->
@@ -42,11 +42,9 @@
 
             // Point your server to the PayPal API
             var PAYPAL_ORDER_API = 'https://api.paypal.com/v2/checkout/orders/';
-
         </script>
 
-        <script src="https://www.paypal.com/sdk/js?client-id=">
-        </script>
+        <script src="https://www.paypal.com/sdk/js?client-id="></script>
 
         <!--/PayPal-->
 
@@ -58,10 +56,10 @@
 
             <!-- Sidebar -->
 
-            @if(Auth::user()->role == 1)
-            @include('layouts.sidebars.user_sidebar')
+            @if (Auth::user()->role == 1)
+                @include('layouts.sidebars.user_sidebar')
             @elseif(Auth::user()->role == 222)
-            @include('layouts.sidebars.admin_sidebar')
+                @include('layouts.sidebars.admin_sidebar')
             @endif
             <!-- End Sidebar -->
             <!-- Verify Modal -->
@@ -75,37 +73,38 @@
                 <footer class="footer bg-dark text-light">
                     <div class="container-fluid">
                         <div class="row copyright text-center text-align-center">
-                            <p>All Rights Reserved &copy; {{env('APP_NAME')}} 2014 - 2021</p>
+                            <p>All Rights Reserved &copy; {{ env('APP_NAME') }} 2014 - 2021</p>
                         </div>
                     </div>
                 </footer>
             </div>
         </div>
     </div>
-    <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>
 
-<script>
-    function logout(){
-        document.getElementById('logout-form').submit()
-    }
-</script>
+    <script>
+        function logout() {
+            document.getElementById('logout-form').submit()
+        }
+    </script>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-// var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-// (function(){
-// var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-// s1.async=true;
-// s1.src='https://embed.tawk.to/61eb0330b9e4e21181bb3a4b/1fpv08uim';
-// s1.charset='UTF-8';
-// s1.setAttribute('crossorigin','*');
-// s0.parentNode.insertBefore(s1,s0);
-// })();
-// </script>
-<script src="//code.tidio.co/8u2k12gjho8lgogbegdoxtbx558e2epb.js" async></script>{{-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="8871136f-7560-4f94-8bb8-24b42a840f85";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> --}}
-<!--End of Tawk.to Script-->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        // (function(){
+        // var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        // s1.async=true;
+        // s1.src='https://embed.tawk.to/61eb0330b9e4e21181bb3a4b/1fpv08uim';
+        // s1.charset='UTF-8';
+        // s1.setAttribute('crossorigin','*');
+        // s0.parentNode.insertBefore(s1,s0);
+        // })();
+        //
+    </script>
+    <script src="//code.tidio.co/8u2k12gjho8lgogbegdoxtbx558e2epb.js" async></script>{{-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="8871136f-7560-4f94-8bb8-24b42a840f85";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> --}}
+    <!--End of Tawk.to Script-->
 
     <!--   Core JS Files   -->
     <script src="/user/js/core/jquery.3.2.1.min.js "></script>
@@ -136,29 +135,37 @@
     <script src="/user/js/atlantis.min.js"></script>
     <script src="/user/js/atlantis.js"></script>
 
+    @if (Auth::user()->role == 1)
+        @include('layouts.component/chat')
+    @endif
+
     <script>
-        $(document).ready( function () {
-			$('#ShipTable').DataTable({
-				order: [ [0, 'desc'] ],
-				dom: 'Bfrtip',
-				buttons: [
-				'copy', 'csv', 'print', 'excel','pdf'
-        	]
-			});
+        $(document).ready(function() {
+            $('#ShipTable').DataTable({
+                order: [
+                    [0, 'desc']
+                ],
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'print', 'excel', 'pdf'
+                ]
+            });
 
 
-			$(".dataTables_length select").addClass("bg-dark text-light");
-			$(".dataTables_filter input").addClass("bg-dark text-light");
-		} );
+            $(".dataTables_length select").addClass("bg-dark text-light");
+            $(".dataTables_filter input").addClass("bg-dark text-light");
+        });
     </script>
     <script>
-        $(document).ready( function () {
-			$('.UserTable').DataTable({
-				order: [ [0, 'desc'] ]
-			});
-			$(".dataTables_length select").addClass("bg-dark text-light");
-			$(".dataTables_filter input").addClass("bg-dark text-light");
-		} );
+        $(document).ready(function() {
+            $('.UserTable').DataTable({
+                order: [
+                    [0, 'desc']
+                ]
+            });
+            $(".dataTables_length select").addClass("bg-dark text-light");
+            $(".dataTables_filter input").addClass("bg-dark text-light");
+        });
     </script>
 
 

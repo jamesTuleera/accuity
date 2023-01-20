@@ -129,6 +129,7 @@
         </div> <!-- ./container -->
     </div>
     <!-- Javascript Files -->
+    @include('layouts.component/chat')
 
     <!-- initialize jQuery Library -->
     <script src="{{ mix('js/app.js') }}"></script>
