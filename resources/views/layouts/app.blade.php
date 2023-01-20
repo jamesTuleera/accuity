@@ -76,7 +76,7 @@
                                         @if (Route::currentRouteName() == 'register')
                                         <a href="{{ route('login') }}" data-panel=".panel-signup" href="#"
                                         class="btn btn-block btn-facebook mb-5 lnk-toggler"
-                                        style="background-color:#FF4444;color:white;font-weight:bolder">
+                                        style="background-color:navy;color:white;font-weight:bolder">
                                         <center>
                                             <i class="fa fa-reg"></i> <span class="">Login Now</span>
                                         </center>
@@ -86,7 +86,7 @@
 
                                     <a href="{{ route('register') }}" data-panel=".panel-signup" href="#"
                                             class="btn btn-block btn-facebook mb-5 lnk-toggler"
-                                            style="background-color:#FF4444;color:white;font-weight:bolder">
+                                            style="background-color:navy;color:white;font-weight:bolder">
                                             <center>
                                                 <i class="fa fa-reg"></i> <span class="">Register Now</span>
                                             </center>
