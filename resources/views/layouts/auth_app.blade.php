@@ -48,7 +48,6 @@
 
         <!--/PayPal-->
 
-        {{-- <script src="//code.tidio.co/h9h6pr9o1bnkgva4eqsyxbmlm1wuhy07.js" async></script> --}}
 
         <div class="wrapper">
 
@@ -103,8 +102,6 @@
         // })();
         //
     </script>
-    <script src="//code.tidio.co/8u2k12gjho8lgogbegdoxtbx558e2epb.js" async></script>{{-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="8871136f-7560-4f94-8bb8-24b42a840f85";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> --}}
-    <!--End of Tawk.to Script-->
 
     <!--   Core JS Files   -->
     <script src="/user/js/core/jquery.3.2.1.min.js "></script>
