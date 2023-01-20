@@ -1,7 +1,7 @@
 <template lang="">
     <div style="overflow:auto">
         <div class="authfy-heading">
-            <h3 class="text-warning">Sign up for free</h3>
+            <h3 class="text-primary">Sign up for free</h3>
         </div>
 
 
@@ -12,7 +12,7 @@
                     type="text"
                     class="form-control"
                     v-model="first_name"
-                    placeholder="Full name"
+                    placeholder="First name"
                 />
                 <span class="focus-input"></span>
             </div>

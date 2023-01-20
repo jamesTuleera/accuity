@@ -62,7 +62,7 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12">
 
                                         <a href="../" class="btn btn-block btn-facebook"
-                                            style="background-color:#fff;color:#FF4444">
+                                            style="background-color:#fff;color:navy">
                                             <center>
                                                 {{-- <p>{{ route('register') }}</p> --}}
                                                 <i class="fa fa-home"></i> <span class="">Back To Homepage</span>

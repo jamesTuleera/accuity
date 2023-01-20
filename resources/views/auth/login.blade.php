@@ -28,7 +28,7 @@
                         <input type="password" class="form-control password" name="password"
                             placeholder="Password">
                         <span class="focus-input"></span>
-                        <span class="fa fa-eye-slash pwd-toggle"></span>
+                        {{-- <span class="fa fa-eye-slash pwd-toggle"></span> --}}
                     </div>
                 </div>
                 <!-- start remember-row -->
