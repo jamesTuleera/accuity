@@ -71,7 +71,7 @@
 
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 col-md-12 mb-5">
+                                    <div style="margin-bottom: 100px" class="col-xs-12 col-sm-12 col-md-12">
 
                                         @if (Route::currentRouteName() == 'register')
                                         <a href="{{ route('login') }}" data-panel=".panel-signup" href="#"
