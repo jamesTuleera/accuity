@@ -33,11 +33,11 @@
                         @csrf
                         <div class="form-group">
                             <label for="" class="text-light">Wallet name</label>
-                            <input type="text" name="name" id="" placeholder="Wallet name" class="form-control">
+                            <input type="text" name="name" id="" placeholder="Wallet name eg (bitcoin, etherium, Dodge))" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="" class="text-light">Wallet Address</label>
-                            <input type="text" name="wallet_address" id="" placeholder="Wallet name" class="form-control">
+                            <input type="text" name="wallet_address" id="" placeholder="Wallet Address" class="form-control">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary w-100 btn-md">Add wallet</button>

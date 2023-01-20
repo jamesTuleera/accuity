@@ -82,7 +82,15 @@
             </div>
         </div>
     </div>
+    <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+        @csrf
+    </form>
 
+<script>
+    function logout(){
+        document.getElementById('logout-form').submit()
+    }
+</script>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -127,7 +135,7 @@
     <!-- Atlantis JS -->
     <script src="/user/js/atlantis.min.js"></script>
     <script src="/user/js/atlantis.js"></script>
-   
+
     <script>
         $(document).ready( function () {
 			$('#ShipTable').DataTable({

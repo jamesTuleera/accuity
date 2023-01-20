@@ -118,8 +118,7 @@
                         <p>Pay ROI</p>
                     </a>
                 </li>
-                <li class="nav-item" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
+                <li class="nav-item" onclick="logout()">
                     <a href="#">
                         <i class="fa fa-life-ring" aria-hidden="true"></i>
                         <p>Logout</p>

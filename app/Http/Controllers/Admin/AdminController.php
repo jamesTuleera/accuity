@@ -63,7 +63,9 @@ class AdminController extends Controller
 
     public function usersView()
     {
-        $users = User::with('wallet')->where('mine', NULL)->orderBy('id', 'desc')->where('role', 1)->get();
+
+        $users = User::where('role', 1)->latest()->get();
+        // dd($users[0]->wallet);
         return view('admin.users', compact('users'));
     }
 
@@ -94,14 +96,21 @@ class AdminController extends Controller
             ]);
         }
 
-           if($dt->trans_type == "Referal Bonu"){
+        if($dt->trans_type == "Investment"){
+            $user->wallet->update([
+                'investment' => $user->wallet->investment + $dt->amount,
+                'balance' => $user->wallet->balance + $dt->amount
+            ]);
+        }
+
+           if($dt->trans_type == "Referal Bonus"){
             $user->wallet->update([
                 'ref_bonus' => $user->wallet->ref_bonus + $dt->amount,
                 'balance' => $user->wallet->balance + $dt->amount
             ]);
         }
 
-        $trans = Transaction::create([
+        Transaction::create([
             'user_id' => $dt->user_id,
             'reference' => uniqid(),
             'type' => $dt->trans_type,

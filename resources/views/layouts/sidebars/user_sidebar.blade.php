@@ -53,14 +53,11 @@
                                     href="{{route('users.profile')}}">Update
                                     Account</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"
-                                    onclick="document.getElementById('logout-form').submit();">
+                                <span class="dropdown-item" 
+                                    onclick="logout();">
                                     Logout
-                                </a>
-                                <form id="logout-form" action="{{route('logout')}}"
-                                    method="POST" style="display: none;">
-                                    @csrf
-                                </form>
+                                </span>
+
                             </li>
                         </div>
                     </ul>
