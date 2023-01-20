@@ -34,10 +34,9 @@
                 <!-- start remember-row -->
                 <div class="row remember-row">
                     <div class="col-xs-6 col-sm-6">
-                        <label class="checkbox text-left">
+
                             <input type="checkbox" value="remember-me">
                             <span class="label-text">Remember me</span>
-                        </label>
                     </div>
 
                 </div> <!-- ./remember-row -->

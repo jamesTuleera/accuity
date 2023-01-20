@@ -204,7 +204,7 @@
                                 </div>
 
                                 <p class="content-desc animated" data-animation="fadeInUpShorter"
-                                    data-animation-delay="0.4s">{{ env('APP_NAME') }} is a fully registered online
+                                    data-animation-delay="0.4s"> {{ env('APP_NAME') }} is a fully registered online
                                     investing platform with all required authorities. To minimize losses and increase
                                     returns for clients, our team of experts delivers secure, intelligent trading.</p>
                             </div>
@@ -833,7 +833,7 @@
                                                             and believe in customer service and transparency. We are
                                                             committed to optimum delivery and uprightness. We let our
                                                             service do the talking. Any funds you put
-                                                            into{{ env('APP_NAME') }} are only used to facilitate
+                                                            into {{ env('APP_NAME') }} are only used to facilitate
                                                             trading through your account. Unlike banks, we do not
                                                             operate on fractional reserves.
                                                         </div>
