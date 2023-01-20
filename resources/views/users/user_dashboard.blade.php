@@ -114,7 +114,7 @@
 
         <div class="row mb-5">
 
-
+{{--
             <div class="col-lg-3 p-4 card bg-dark shadow-lg">
                 <div class="pricing-table purple border bg-dark shadow-lg">
                     <h3 class='text-light d-flex justify-content-between'><span>Invest:</span> <span>$500</span></h3><hr class='bg-light'>
@@ -204,7 +204,7 @@
                         <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;" href="{{route('users.deposit')}}">Deposit</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!--<div class="col-lg-3 p-4 card bg-dark shadow-lg">-->
             <!--    <div class="pricing-table purple border bg-dark shadow-lg">-->
