@@ -116,8 +116,8 @@
 
 
 
-                                        <a class="lnk-toggler" data-panel=".panel-login" href="{{ route('login') }}"
-                                            style="color:#FF4444;font-weight:bolder">Already have an Account ?</a>
+                                        {{-- <a class="lnk-toggler" data-panel=".panel-login" href="{{ route('login') }}"
+                                            style="color:#FF4444;font-weight:bolder">Already have an Account ?</a> --}}
 
                                     </div>
                                 </div>
