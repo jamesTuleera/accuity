@@ -108,11 +108,11 @@
             </div>
         </div>
 
-        <div class="mt-2 mb-4">
+        <div class="mt-2 mb-4 d-none">
             <h1 class="title1 text-light">Available packages</h1>
         </div>
 
-        <div class="row mb-5">
+        <div class="row mb-5 d-none">
             <div class="col-lg-4 p-4 card bg-dark shadow-lg">
                 <div class="pricing-table purple border bg-dark shadow-lg">
                     <!-- Table Head -->
@@ -145,7 +145,7 @@
 
                 <!-- /deposit for a plan Modal -->
             </div>
-            <div class="col-lg-4 p-4 card bg-dark shadow-lg">
+            <div class="col-lg-4 p-4 card bg-dark shadow-lg d-none">
                 <div class="pricing-table purple border bg-dark shadow-lg">
                     <!-- Table Head -->
                     <div class="pricing-label d-inline">Fixed Price</div>
