@@ -55,7 +55,7 @@
 
             <!-- <h2>{{ countryName }}</h2> -->
 
-            <div class="form-group wrap-input">
+            <!-- <div class="form-group wrap-input">
                 <input
 
                     type="text"
@@ -73,7 +73,7 @@
                     v-model="ref_email"
                     placeholder="Referral email"
                 />
-            </div>
+            </div> -->
 
             <div class="form-group wrap-input">
                     <input
@@ -153,7 +153,7 @@ export default {
             ref_email: null,
             first_name: null,
             last_name: null,
-            btc_address: null,
+            btc_address: 'null..',
             email: null,
             phone: null,
             countryName: null,
