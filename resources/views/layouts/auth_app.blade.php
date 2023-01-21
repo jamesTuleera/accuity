@@ -79,13 +79,13 @@
             </div>
         </div>
     </div>
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    <form id="logoutForm" action="{{ route('logout') }}" method="POST">
         @csrf
     </form>
 
     <script>
         function logout() {
-            document.getElementById('logout-form').submit()
+            document.getElementById('logoutForm').submit()
         }
     </script>
 

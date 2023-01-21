@@ -53,7 +53,7 @@
                                     href="{{route('users.profile')}}">Update
                                     Account</a>
                                 <div class="dropdown-divider"></div>
-                                <span class="dropdown-item" 
+                                <span class="dropdown-item"
                                     onclick="logout();">
                                     Logout
                                 </span>
@@ -160,9 +160,9 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" onclick="document.getElementById('logout-form').submit();">
-                        <i class="fa fa-life-ring" aria-hidden="true"></i>
+                <li class="nav-item" onclick="logout()">
+                    <a href="#" >
+                        <i class="fa fa-sign-out" ></i>
                         <p>Logout</p>
                     </a>
                 </li>

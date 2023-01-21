@@ -76,6 +76,24 @@
             </div> -->
 
             <div class="form-group wrap-input">
+                <select class="form-control" name="cur" >
+                            <option selected disabled>Choose Currency</option>
+                            <option value="$">US Dollar</option>
+                            <option value="€">Euro</option>
+                            <option value="£">British Pound Sterling</option>
+                        </select>
+              </div>
+
+             <div class="form-group wrap-input">
+                <input type="text" class="form-control" name="occu" placeholder="Occupation">
+              </div>
+
+
+              <div class='form-group wrap-input'>
+                <input type='text' readonly class='form-control' name='ref' value='No Referral'>
+              </div>
+
+            <div class="form-group wrap-input">
                     <input
 
                         type="password"
