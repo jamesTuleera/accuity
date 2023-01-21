@@ -152,13 +152,13 @@
                         <p>Profle setting</p>
                     </a>
                 </li>
-
+{{--
                 <li class="nav-item">
                     <a href="{{route('users.support')}}">
                         <i class="fa fa-life-ring" aria-hidden="true"></i>
                         <p>Support</p>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="nav-item" onclick="logout()">
                     <a href="#" >

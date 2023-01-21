@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PublicController@welcome')->name('welcome');
 Route::get('/about-us', 'PublicController@about')->name('about');
 Route::get('/contact-us', 'PublicController@contactView')->name('contact');
+Route::get('/countries', 'UtilityController@countries');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
