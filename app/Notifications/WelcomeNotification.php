@@ -44,8 +44,9 @@ class WelcomeNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('Hi '. $this->user->first_name .', Welcome to '. env('APP_NAME') .'. ')
-                    ->line('Ask us anything if you need any assistance, I’m always here,  We are here and ready to help!')
+                    ->line('Hi '. $this->user->first_name .',')
+                    ->line('Welcome to '. env('APP_NAME') .'. ')
+                    ->line('Ask us anything if you need assistance, We are always here and ready to help!')
                     ->action('Visit site', url('/'))
                     ->line('Thank you for registrating!');
     }
