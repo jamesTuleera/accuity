@@ -114,7 +114,7 @@
 
         <div class="row mb-5">
 
-            @foreach ($plans as $plan)
+            {{-- @foreach ($plans as $plan)
             <div class="col-lg-3 p-4 card bg-dark shadow-lg">
                 <div class="pricing-table purple border bg-dark shadow-lg">
                     <h3 class='text-light d-flex justify-content-between'><span>Invest:</span> <span>${{ $plan->invest }}</span></h3><hr class='bg-light'>
@@ -124,7 +124,25 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endforeach --}}
+
+            <div class="col-md-4 p-4 card bg-dark shadow-lg">
+                <a href="{{route('users.deposit')}}">
+                    <img class="w-100" src="{{ asset('homeAsset/bronze.png') }}" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 p-4 card bg-dark shadow-lg">
+                <a href="{{route('users.deposit')}}">
+                    <img class="w-100" src="{{ asset('homeAsset/silver.png') }}" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 p-4 card bg-dark shadow-lg">
+                <a href="{{route('users.deposit')}}">
+                    <img class="w-100" src="{{ asset('homeAsset/gold.png') }}" alt="">
+                </a>
+            </div>
+
+
 
 
 {{--

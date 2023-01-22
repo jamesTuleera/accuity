@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactUs;
 use App\Notifications\RegistrationNotification;
+use App\Notifications\WelcomeNotification;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use App\Wallet;
@@ -62,7 +63,7 @@ class RegisterController extends Controller
             'phone' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
             'btc_address' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -93,10 +94,16 @@ class RegisterController extends Controller
         ]);
 
         try {
+            $user->notify(new WelcomeNotification($user));
             User::find(1)->notify(new RegistrationNotification($user));
+
         } catch (\Exception $th) {
-            //throw $th;
+            // throw $th;
         }
+        // dd(true);
+
+
+
 
         // Mail::to($user->email)->send(new ContactUs($user->email));
 

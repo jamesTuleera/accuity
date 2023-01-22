@@ -129,7 +129,7 @@
             </div>
 
             <div class="form-group">
-                <input type="checkbox"  style="float: left" />
+                <input type="checkbox" required  style="float: left" />
                 <p class="term-policy text-muted small">
                     I agree to the
                     <a href="#" style="color: navy">privacy policy</a> and
