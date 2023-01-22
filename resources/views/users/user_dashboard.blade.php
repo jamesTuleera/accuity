@@ -137,7 +137,7 @@
                 </a>
             </div>
             <div class="col-md-4 p-4 card bg-dark shadow-lg">
-                <a href="{{route('users.deposit')}}">
+                <a href="{{ route('users.deposit') }}">
                     <img class="w-100" src="{{ asset('homeAsset/gold.png') }}" alt="">
                 </a>
             </div>
