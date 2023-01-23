@@ -58,9 +58,9 @@
 
                     </div>
                     <ul style="color: white;">
-                        <li><i class="fa fa-dot-circle-o"></i> All payment should be made into the above accounts</li>
-                        <li><i class="fa fa-dot-circle-o"></i> After payment, kindly paste the transaction ID for confirmation</li>
-                        <li><i class="fa fa-dot-circle-o"></i> After payment confirmation transfer the money from your wallet to your
+                        <li><i class="fa fa-dot-circle-o"></i> All deposit should be made to the provided Crypto address</li>
+                        <li><i class="fa fa-dot-circle-o"></i> After deposit is done, kindly hold on for confirmation and approval so as to enable us confirm your deposit and get your account funded for trading.</li>
+                        {{-- <li><i class="fa fa-dot-circle-o"></i> After payment confirmation transfer the money from your wallet to your --}}
                             investment</li>
                     </ul>
                 </div>
