@@ -116,9 +116,13 @@
                     {{-- <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter blockchain transaction id here" type="text" name="trans_id" ><br /> --}}
                     <select name="payMethod" class="form-control text-light bg-dark" id="">
                         <option disabled>Payment method</option>
-                        <option value="bitcoin">Bitcoin</option>
+                        {{-- <option value="bitcoin">Bitcoin</option>
                         <option value="Etherium">Etherium</option>
-                        <option value="litcoin">Litcoin</option>
+                        <option value="litcoin">Litcoin</option> --}}
+
+                        @foreach ($wallets as $wallet)
+                       <option value="{{$wallet->name}}">{{$wallet->name}}</option>
+                        @endforeach
                     </select> <br>
                     <input type="submit" class="btn btn-light" value="Continue">
                 </form>
