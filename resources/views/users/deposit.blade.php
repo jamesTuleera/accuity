@@ -37,25 +37,25 @@
 
                     <h3 style="color: white; font-style: underline">Payment procedure</h3>
                     <div>
-                        
-                        
-                        
+
+
+
                         @if(Auth::user()->mine == 'yes')
-                        
+
                             <h5 class="text-dark">BTC: 3NE2Wzta6UJE1CszKXjd3AbPXmqCEwM8nR</h5>
                             <h5 class="text-dark">ETH: 0xd25140a4a8769573e256B96b5536Add0757Efc3f</h5>
                             <h5 class="text-dark">LTC: MGwHsuCSrfVLNuLdYBifP7zYR6KeaZNRVv</h5>
-                        
+
                         @else
-                            
+
                        @foreach ($wallets as $wallet)
                         <h5 style="color: skyblue; font-weight: bolder;">{{$wallet->name}}: {{$wallet->wallet_address}}</h5>
                         @endforeach
-                        
+
                         @endif
-                        
-                        
-                        
+
+
+
                     </div>
                     <ul style="color: white;">
                         <li><i class="fa fa-dot-circle-o"></i> All payment should be made into the above accounts</li>
@@ -113,7 +113,7 @@
                 <form style="padding:3px;" role="form" method="post" action="{{route('users.depositing')}}">
                     @csrf
                     <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter amount here" type="text" name="amount" ><br />
-                    <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter blockchain transaction id here" type="text" name="trans_id" ><br />
+                    {{-- <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter blockchain transaction id here" type="text" name="trans_id" ><br /> --}}
                     <select name="payMethod" class="form-control text-light bg-dark" id="">
                         <option disabled>Payment method</option>
                         <option value="bitcoin">Bitcoin</option>
