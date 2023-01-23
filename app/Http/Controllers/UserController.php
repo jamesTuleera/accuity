@@ -112,7 +112,7 @@ class UserController extends Controller
     {
 
         $data->validate([
-            'trans_id' => 'required|string|max:255',
+            // 'trans_id' => 'required|string|max:255',
             'payMethod' => 'required', 'string', 'max:255',
             'amount' => 'required|max:255',
         ]);
