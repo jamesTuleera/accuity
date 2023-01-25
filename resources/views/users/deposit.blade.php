@@ -102,7 +102,7 @@
                                 <li><i class="fa fa-dot-circle-o"></i> After deposit is done, kindly hold on for confirmation and
                                     approval so as to enable us confirm your deposit and get your account funded for trading.</li>
                             </ul>
-                            <h4 class="text-warning"> <i class="fas fa-angle-double-right"></i> {{ $wlt->wallet_address }}</h4>
+                            <p class="text-warning"> <i class="fas fa-angle-double-right"></i> {{ $wlt->wallet_address }}</p>
                         </div>
                     </div>
 
