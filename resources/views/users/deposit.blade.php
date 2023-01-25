@@ -89,8 +89,11 @@
                             <ul style="color: white;">
                                 <li><i class="fa fa-dot-circle-o"></i> All deposit should be made to the provided Crypto address
                                 </li> <br>
-                                <li><i class="fa fa-dot-circle-o"></i> After deposit is done, kindly hold on for confirmation and
-                                    approval so as to enable us confirm your deposit and get your account funded for trading.</li>
+                                <li><i class="fa fa-dot-circle-o"></i>
+                                    {{-- After deposit is done, kindly hold on for confirmation and
+                                    approval so as to enable us confirm your deposit and get your account funded for trading. --}}
+                                    All deposit should be done to the provided crypto address below, upon completion of deposit, input the amount you deposited and click done.
+                                </li>
                             </ul>
                             <p class="text-warning"> <i class="fas fa-angle-double-right"></i> {{ $wlt->wallet_address }}</p>
                         </div>
