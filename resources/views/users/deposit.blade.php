@@ -132,6 +132,7 @@
 </div>
 <!-- /deposit Modal -->
 
+
 <!-- Delete Subscription Modal -->
 <div id="delsubmodal" class="modal fade" role="dialog">
     <div class="modal-dialog">
