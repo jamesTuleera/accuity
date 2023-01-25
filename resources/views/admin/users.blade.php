@@ -52,7 +52,7 @@
                                             <button data-toggle="modal" data-target="#depositModal{{ $user->id }}"
                                                 class="btn btn-primary btn-sm">Payment</button>
                                             <button data-toggle="modal" data-target="#manager{{ $user->id }}"
-                                                class="btn btn-danger btn-sm">Manager</button>
+                                                class="btn btn-warning btn-sm">Manager</button>
                                             {{-- <button data-toggle="modal" data-target="#depositModal{{$user->id}}" class="btn btn-danger btn-sm">Ban</button> --}}
                                             {{-- <button class="btn btn-primary btn-sm">Pay ROI</button> --}}
                                         </td>
