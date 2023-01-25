@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mt-2 mb-5">
-                        <h3 class="title1 text-light">Click on preferred wallet below:</h3>
+                        <h3 class="title1 text-light">Click on preferred deposit wallet below:</h3>
                         @foreach ($wallets as $wallet)
                             <button
                             class="btn btn-md btn-primary m-2"
