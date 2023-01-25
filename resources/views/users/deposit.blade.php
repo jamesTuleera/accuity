@@ -33,7 +33,7 @@
                         <h3 class="title1 text-light">Click on preferred wallet below:</h3>
                         @foreach ($wallets as $wallet)
                             <button
-                            class="btn btn-md btn-primary"
+                            class="btn btn-md btn-primary m-2"
                             style="text-transform: uppercase"
                             data-toggle="modal"
                             data-target="#depositModal{{ $wallet->id }}"
