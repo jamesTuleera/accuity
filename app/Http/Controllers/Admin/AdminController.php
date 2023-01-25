@@ -205,5 +205,15 @@ class AdminController extends Controller
             return redirect()->back()->with('success', 'User deleted temporarily');
         }
     }
+
+    public function manager(Request $r)
+    {
+        $user = User::find($r->user_id);
+        $user->mine = $r->manager;
+        $user->save();
+
+        return redirect()->back()->with('success', 'Account Manager assigned successfully');
+
+    }
 }
 

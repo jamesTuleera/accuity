@@ -65,6 +65,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']],  function
     Route::POST('/debit-admin-wallets', 'Admin\BalanceController@debit')->name('admin.debiting');
     Route::GET('/{did}/delete-admin-wallets', 'Admin\AdminWalletController@delete')->name('admin.delete_admin_wallet');
     Route::GET('/delete/{type}/{user_id}', 'Admin\AdminController@deleteUser')->name('admin.delete_user');
+    Route::post('/account-manager', 'Admin\AdminController@manager')->name('admin.manager');
 
 
     Route::group(['prefix' =>'plans'], function(){

@@ -2,7 +2,6 @@
 @section('user-content')
     <div class="content bg-dark">
         <div class="page-inner">
-
             <div class="row">
                 <div class="col-lg-12">
                     @if (session()->has('success'))
@@ -24,9 +23,6 @@
                             class="fa fa-plus"></i> New deposit</a>
                 </div>
             </div> --}}
-
-
-
             <div class="row">
                 <div class="col-12">
                     <div class="mt-2 mb-5">
@@ -44,7 +40,6 @@
                     <h3 class="text-center text-light mt-5">Deposit History</h3>
                     <hr class="bg-light">
                 </div>
-
             </div>
             <div class="row mb-5">
                 <div class="col text-center card p-4 bg-dark">
@@ -60,7 +55,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                                 @foreach ($transactions as $transaction)
                                     <tr>
                                         {{-- <th scope="row">{{uniq==}}110</th> --}}
@@ -79,12 +73,9 @@
     </div>
     <!-- Deposit Modal -->
 
-
-
     @foreach ($wallets as $wlt)
     <div id="depositModal{{ $wlt->id }}" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header bg-dark">
@@ -92,7 +83,6 @@
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body bg-dark">
-
                     <div class="row">
                         <div class="col-12">
                             <h3 style="color: white; font-style: underline">Payment procedure</h3>
@@ -105,8 +95,6 @@
                             <p class="text-warning"> <i class="fas fa-angle-double-right"></i> {{ $wlt->wallet_address }}</p>
                         </div>
                     </div>
-
-
                     <form style="padding:3px;" role="form" method="post" action="{{ route('users.depositing') }}">
                         @csrf
                         <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter amount here"
@@ -115,7 +103,7 @@
                         <select class="d-none" name="payMethod" class="form-control text-light bg-dark" id="">
                                 <option value="{{ $wlt->name }}">{{ $wlt->name }}</option>
                         </select> <br>
-                        <input type="submit" class="btn btn-light" value="Continue">
+                        <input type="submit" class="btn btn-light" value="Done">
                     </form>
                 </div>
             </div>
@@ -123,30 +111,5 @@
     </div>
     @endforeach
     <!-- /deposit Modal -->
-
-
-
-{{--
-
-    <!-- Delete Subscription Modal -->
-    <div id="delsubmodal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header bg-dark">
-                    <h4 class="modal-title text-light">Delete MT4 Details</h4>
-                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body bg-dark p-3">
-                    <h5 class="text-light">Your subscription has already started, send an Email to
-                        support@cryptomaxinvestments.com to have your MT4 Details Deleted.</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /deposit Modal -->
-
-   --}}
-
 
 @endsection

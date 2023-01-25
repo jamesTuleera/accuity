@@ -152,6 +152,16 @@
                         <p>Profle setting</p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="#"
+                        data-toggle="modal"
+                        data-target="#accountManager"
+                    >
+                        <i class="fa fa-briefcase " aria-hidden="true"></i>
+                        <p>Account Manager</p>
+                    </a>
+                </li>
 {{--
                 <li class="nav-item">
                     <a href="{{route('users.support')}}">

@@ -49,12 +49,32 @@
         <!--/PayPal-->
 
 
+
+    <!-- Delete Subscription Modal -->
+    <div id="accountManager" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4 class="modal-title text-light">Account Manager</h4>
+                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body bg-dark p-3">
+
+                    @if (Auth::user()->mine !== NULL)
+                    <h2 class="text-light"> <i class="fa fa-briefcase"></i> Account Manager: {{ Auth::user()->mine }}</h2>
+                    @else
+                        <h2 class="text-light"> <i class="fa fa-briefcase"></i> : You currently don't have an account manager</h2>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /deposit Modal -->
+
+
+
+
         <div class="wrapper">
-
-            <!-- Stored in resources/views/child.blade.php -->
-
-            <!-- Sidebar -->
-
             @if (Auth::user()->role == 1)
                 @include('layouts.sidebars.user_sidebar')
             @elseif(Auth::user()->role == 222)
@@ -89,19 +109,6 @@
         }
     </script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        // (function(){
-        // var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        // s1.async=true;
-        // s1.src='https://embed.tawk.to/61eb0330b9e4e21181bb3a4b/1fpv08uim';
-        // s1.charset='UTF-8';
-        // s1.setAttribute('crossorigin','*');
-        // s0.parentNode.insertBefore(s1,s0);
-        // })();
-        //
-    </script>
 
     <!--   Core JS Files   -->
     <script src="/user/js/core/jquery.3.2.1.min.js "></script>
