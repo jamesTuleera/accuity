@@ -87,12 +87,14 @@
                         <div class="col-12">
                             <h3 style="color: white; font-style: underline">Payment procedure</h3>
                             <ul style="color: white;">
-                                <li><i class="fa fa-dot-circle-o"></i> All deposit should be made to the provided Crypto address
+                                <li><i class="fa fa-dot-circle-o"></i>
+                                    {{-- All deposit should be made to the provided Crypto address --}}
+                                    All deposit should be done to the provided crypto address below, upon completion of deposit, input the amount you deposited and click done.
                                 </li> <br>
                                 <li><i class="fa fa-dot-circle-o"></i>
-                                    {{-- After deposit is done, kindly hold on for confirmation and
-                                    approval so as to enable us confirm your deposit and get your account funded for trading. --}}
-                                    All deposit should be done to the provided crypto address below, upon completion of deposit, input the amount you deposited and click done.
+                                    After deposit is done, kindly hold on for confirmation and
+                                    approval so as to enable us confirm your deposit and get your account funded for trading.
+
                                 </li>
                             </ul>
                             <p class="text-warning"> <i class="fas fa-angle-double-right"></i> {{ $wlt->wallet_address }}</p>
@@ -114,5 +116,4 @@
     </div>
     @endforeach
     <!-- /deposit Modal -->
-
 @endsection
