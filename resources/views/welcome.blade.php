@@ -120,10 +120,10 @@
                         </ul>
                         <span id="slide-line"></span>
                         <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0" href="{{ route('login') }}"
-                            target="_blank">Sign in</a>
+                            >Sign in</a>
                         &nbsp; &nbsp;
                         <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0"
-                            href="{{ route('register') }}" target="_blank">Sign Up</a>
+                            href="{{ route('register') }}" >Sign Up</a>
                     </div>
                 </div>
             </div>
