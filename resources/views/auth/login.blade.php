@@ -46,6 +46,10 @@
                         class="btn btn-lg btn-primary btn-block" type="submit">Login
                         Now</button>
                 </div>
+
+                <div class="col-12">
+            <p class="mb-0 small">Forgot password? <a href="{{ route('password.request') }}">Reset here</a></p>
+        </div>
             </form>
         </div>
     </div>
