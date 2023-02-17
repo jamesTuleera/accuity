@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
->
+<br><br><br><br><br>
+
                 <div class="card-header">{{ __('Confirm Password') }}</div>
 
                 <div class="card-body">
@@ -39,5 +40,7 @@
                         </div>
                     </form>
                 </div>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
 
 @endsection

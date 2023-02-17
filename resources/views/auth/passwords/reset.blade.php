@@ -9,6 +9,7 @@
 </style>
 @section('content')
 
+<br><br><br><br><br>
 
 
                 <div class="card-header">{{ __('Reset Password') }}</div>
@@ -64,5 +65,7 @@
                         </div>
                     </form>
                 </div>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
 
 @endsection
