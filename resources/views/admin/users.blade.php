@@ -53,7 +53,7 @@
                                                 class="btn btn-primary btn-sm">Payment</button>
                                             <button data-toggle="modal" data-target="#manager{{ $user->id }}"
                                                 class="btn btn-warning btn-sm">Manager</button>
-                                                <a href="{{ route('admin.delete_user', ['permanent', $user->id]) }}" class="btn btn-danger btn-sm">Permanent CL</a>
+                                                <a href="{{ route('admin.delete_user', ['permanent', $user->id]) }}" class="btn btn-danger btn-sm">Delete </a>
                                                 {{-- <a href="{{ route('admin.delete_user', ['temporary', $user->id]) }}" class="btn btn-warning btn-sm">Temporary Delete</a> --}}
                                                 {{-- <button class="btn btn-primary btn-sm">Pay ROI</button> --}}
                                         </td>
