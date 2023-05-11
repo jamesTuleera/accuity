@@ -16,6 +16,8 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
+
+
     public function depositView()
     {
         $transactions = Transaction::where('type', '=', 'deposit')->orderBy('id','desc')->get();
@@ -189,7 +191,7 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Status successfully changed');
     }
 
-    public function deleteUser(Request $dt, $type, $user_id)
+    public function deleteUser($type, $user_id)
     {
 
         // die($type .' '. $user_id);

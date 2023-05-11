@@ -28,12 +28,9 @@
                     <div class="mt-2 mb-5">
                         <h3 class="title1 text-light">Click on preferred deposit wallet below:</h3>
                         @foreach ($wallets as $wallet)
-                            <button
-                            class="btn btn-md btn-primary m-2"
-                            style="text-transform: uppercase"
-                            data-toggle="modal"
-                            data-target="#depositModal{{ $wallet->id }}"
-                            > <i class="fas fa-angle-double-right"></i></i> {{ $wallet->name }}</button>
+                            <button class="btn btn-md btn-primary m-2" style="text-transform: uppercase" data-toggle="modal"
+                                data-target="#depositModal{{ $wallet->id }}"> <i
+                                    class="fas fa-angle-double-right"></i></i> {{ $wallet->name }}</button>
                         @endforeach
                     </div>
 
@@ -74,46 +71,59 @@
     <!-- Deposit Modal -->
 
     @foreach ($wallets as $wlt)
-    <div id="depositModal{{ $wlt->id }}" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header bg-dark">
-                    <h2 class="modal-title text-light" style="text-transform: uppercase">{{ $wlt->name }}</h2>
-                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body bg-dark">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 style="color: white; font-style: underline">Payment procedure</h3>
-                            <ul style="color: white;">
-                                <li><i class="fa fa-dot-circle-o"></i>
-                                    {{-- All deposit should be made to the provided Crypto address --}}
-                                    All deposit should be done to the provided crypto address below, upon completion of deposit, input the amount you deposited and click done.
-                                </li> <br>
-                                <li><i class="fa fa-dot-circle-o"></i>
-                                    After deposit is done, kindly hold on for confirmation and
-                                    approval so as to enable us confirm your deposit and get your account funded for trading.
-
-                                </li>
-                            </ul>
-                            <p class="text-warning"> <i class="fas fa-angle-double-right"></i> {{ $wlt->wallet_address }}</p>
-                        </div>
+        <div id="depositModal{{ $wlt->id }}" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <h2 class="modal-title text-light" style="text-transform: uppercase">{{ $wlt->name }}</h2>
+                        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                     </div>
-                    <form style="padding:3px;" role="form" method="post" action="{{ route('users.depositing') }}">
-                        @csrf
-                        <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter amount here"
-                            type="text" name="amount"><br />
-                        {{-- <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter blockchain transaction id here" type="text" name="trans_id" ><br /> --}}
-                        <select class="d-none" name="payMethod" class="form-control text-light bg-dark" id="">
+                    <div class="modal-body bg-dark">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 style="color: white; font-style: underline">Payment procedure</h3>
+                                <ul style="color: white;">
+                                    <li><i class="fa fa-dot-circle-o"></i>
+                                        {{-- All deposit should be made to the provided Crypto address --}}
+                                        All deposit should be done to the provided crypto address below, upon completion of
+                                        deposit, input the amount you deposited and click done.
+                                    </li> <br>
+                                    <li><i class="fa fa-dot-circle-o"></i>
+                                        After deposit is done, kindly hold on for confirmation and
+                                        approval so as to enable us confirm your deposit and get your account funded for
+                                        trading.
+
+                                    </li>
+                                </ul>
+                                <p class="text-warning"> <i class="fas fa-angle-double-right"></i>
+                                    {{ $wlt->wallet_address }} <span
+                                        class="pt-0 pb-0 pl-2 pr-2 m-0 btn btn-outline-primary btn-sm buttonText"
+                                        id="btnTxt" onclick="copyTxt('{{ 'refLink' . $wlt->id }}', 'btnTxt')">copy
+                                        link</span></p>
+
+
+
+                                <div class="d-none">
+                                    <input type="text" id="{{ 'refLink' . $wlt->id }}"
+                                        value="{{ $wlt->wallet_address }}" class="d-">
+                                </div>
+                            </div>
+                        </div>
+                        <form style="padding:3px;" role="form" method="post" action="{{ route('users.depositing') }}">
+                            @csrf
+                            <input style="padding:5px;" class="form-control text-light bg-dark"
+                                placeholder="Enter amount here" type="text" name="amount"><br />
+                            {{-- <input style="padding:5px;" class="form-control text-light bg-dark" placeholder="Enter blockchain transaction id here" type="text" name="trans_id" ><br /> --}}
+                            <select class="d-none" name="payMethod" class="form-control text-light bg-dark" id="">
                                 <option value="{{ $wlt->name }}">{{ $wlt->name }}</option>
-                        </select> <br>
-                        <input type="submit" class="btn btn-light" value="Done">
-                    </form>
+                            </select> <br>
+                            <input type="submit" class="btn btn-light" value="Done">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     @endforeach
     <!-- /deposit Modal -->
 @endsection

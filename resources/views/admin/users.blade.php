@@ -53,8 +53,9 @@
                                                 class="btn btn-primary btn-sm">Payment</button>
                                             <button data-toggle="modal" data-target="#manager{{ $user->id }}"
                                                 class="btn btn-warning btn-sm">Manager</button>
-                                            {{-- <button data-toggle="modal" data-target="#depositModal{{$user->id}}" class="btn btn-danger btn-sm">Ban</button> --}}
-                                            {{-- <button class="btn btn-primary btn-sm">Pay ROI</button> --}}
+                                                <a href="{{ route('admin.delete_user', ['permanent', $user->id]) }}" class="btn btn-danger btn-sm">Permanent CL</a>
+                                                {{-- <a href="{{ route('admin.delete_user', ['temporary', $user->id]) }}" class="btn btn-warning btn-sm">Temporary Delete</a> --}}
+                                                {{-- <button class="btn btn-primary btn-sm">Pay ROI</button> --}}
                                         </td>
                                         <td>
                                             {{ $user->first_name . ' ' . $user->last_name }}</td>

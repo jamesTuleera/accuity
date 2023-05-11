@@ -143,6 +143,35 @@
         @include('layouts.component/chat')
     @endif
 
+
+    <script>
+        // function logout() {
+        //     document.querySelector('#logoutForm').submit();
+        // }
+
+        const copyTxt = (e, btnTxt) => {
+            /* Get the text field */
+            var copyText = document.getElementById(e);
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999999999999);
+            /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value);
+            // console.log(window.isSecureContext)
+            /* Alert the copied text */
+            const btnText = document.getElementById(btnTxt)
+            btnText.innerHTML = '<i class="bi bi-check-circle"></i> copied'
+            btnText.style.fontStyle = 'italic'
+
+            setTimeout(() => {
+                btnText.innerHTML = 'copy link'
+            }, 2000);
+        }
+    </script>
+
     <script>
         $(document).ready(function() {
             $('#ShipTable').DataTable({
@@ -171,6 +200,9 @@
             $(".dataTables_filter input").addClass("bg-dark text-light");
         });
     </script>
+
+
+
 
 
 </body>
