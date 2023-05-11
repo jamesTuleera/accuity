@@ -13,11 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     <div class="d-flex justify-content-center">
                         <h2>Page expired <br>  </h2>
                         <a href="{{ route('login') }}" class="btn btn-primary">Dashboard</a>
                     </div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
             </div>
         </div>
