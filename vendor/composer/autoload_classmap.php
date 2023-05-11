@@ -6,7 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Admin' => $baseDir . '/database/seeds/Admin.php',
     'AdminSeeder' => $baseDir . '/database/seeds/AdminSeeder.php',
     'App\\AdminWallet' => $baseDir . '/app/AdminWallet.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -17,6 +16,7 @@ return array(
     'App\\Http\\Controllers\\Admin\\AdminWalletController' => $baseDir . '/app/Http/Controllers/Admin/AdminWalletController.php',
     'App\\Http\\Controllers\\Admin\\BalanceController' => $baseDir . '/app/Http/Controllers/Admin/BalanceController.php',
     'App\\Http\\Controllers\\Admin\\BanController' => $baseDir . '/app/Http/Controllers/Admin/BanController.php',
+    'App\\Http\\Controllers\\Admin\\PlansController' => $baseDir . '/app/Http/Controllers/Admin/PlansController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -44,6 +44,8 @@ return array(
     'App\\Http\\Middleware\\User' => $baseDir . '/app/Http/Middleware/User.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Mail\\ContactUs' => $baseDir . '/app/Mail/ContactUs.php',
+    'App\\Notifications\\RegistrationNotification' => $baseDir . '/app/Notifications/RegistrationNotification.php',
+    'App\\Notifications\\WelcomeNotification' => $baseDir . '/app/Notifications/WelcomeNotification.php',
     'App\\Plans' => $baseDir . '/app/Plans.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
