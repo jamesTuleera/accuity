@@ -27,7 +27,10 @@ class UserController extends Controller
 
         return view('users.user_dashboard', compact('plans'));
 
+
     }
+
+
 
     public function referralView()
     {
@@ -87,7 +90,7 @@ class UserController extends Controller
             // 'password_confirmation' => 'required'
         ]);
 
-        $user = Auth::user();
+        $user = User::where('id', Auth::id())->first();
 
         if(!Hash::check($dt->old_password, $user->password)){
             return redirect()->back()->with('failed', 'Old password didn\'nt match');
@@ -144,7 +147,7 @@ class UserController extends Controller
             'withdrawal_option' => 'required'
         ]);
 
-        $user = Auth::user();
+        $user = User::where('id', Auth::id())->first();
 
         if($dt->withdrawal_option == 'investment'){
             if($dt->amount > $user->wallet->investment){
