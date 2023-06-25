@@ -121,7 +121,6 @@ class UserController extends Controller
         ]);
 
 
-        
         $trans = Transaction::create([
             'user_id' => Auth::user()->id,
             'reference' => uniqid(),
