@@ -106,6 +106,8 @@
                         <p>Confirm payment</p>
                     </a>
                 </li>
+                
+
                 <li class="nav-item {{Route::currentRouteName() == 'admin.withdrawal_request' ? 'active text-dark' : ''}}">
                     <a href="{{route('admin.withdrawal_request')}}">
                         <i class="fa fa-life-ring" aria-hidden="true"></i>

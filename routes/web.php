@@ -75,6 +75,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']],  function
         Route::POST('/edit', 'Admin\PlansController@edit')->name('admin.edit_plans');
     });
 
+
+    Route::group(['prefix' =>'copy-trade'], function(){
+        // Route::GET('/', 'Admin\CopyTradeController@index')->name('admin.copy.trade');
+        Route::POST('/add', 'Admin\CopyTradeController@add')->name('admin.add_plans');
+        // Route::GET('/delete/{id}', 'Admin\CopyTradeController@delete')->name('admin.delete_plans');
+        // Route::POST('/edit', 'Admin\CopyTradeController@edit')->name('admin.edit_plans');
+    });
+
     Route::get('/users/{id}', 'Admin\AdminController@userDetails')->name('admin.user-details');
 
 

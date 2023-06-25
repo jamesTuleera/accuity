@@ -15,6 +15,9 @@ class CreateCopyTradesTable extends Migration
     {
         Schema::create('copy_trades', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->string('name')->nullable();
+            $table->integer('percent')->nullable();
             $table->timestamps();
         });
     }
