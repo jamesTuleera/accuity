@@ -119,8 +119,9 @@ class UserController extends Controller
             'payMethod' => 'required', 'string', 'max:255',
             'amount' => 'required|max:255',
         ]);
-        
 
+
+        
         $trans = Transaction::create([
             'user_id' => Auth::user()->id,
             'reference' => uniqid(),
