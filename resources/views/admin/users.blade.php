@@ -49,11 +49,14 @@
                                 @foreach ($users as $user)
                                     <tr>
                                         <td scope="row">
-                                            <button data-toggle="modal" data-target="#depositModal{{ $user->id }}"
-                                                class="btn btn-primary btn-sm">Payment</button>
+                                            <button data-toggle="modal" data-target="#depositModal{{ $user->id }}" class="btn btn-primary btn-sm">
+                                                <i class="fa fa-money-bill" aria-hidden="true"></i>
+                                            </button>
                                             <button data-toggle="modal" data-target="#manager{{ $user->id }}"
-                                                class="btn btn-warning btn-sm">Manager</button>
-                                                <a href="{{ route('admin.delete_user', ['permanent', $user->id]) }}" class="btn btn-danger btn-sm">Delete </a>
+                                                class="btn btn-warning btn-sm"><i class="fa fa-briefcase"></i></button>
+                                                <a href="{{ route('admin.delete_user', ['permanent', $user->id]) }}" class="btn btn-danger btn-sm">
+                                                    <i class="fa fa-trash"></i>
+                                                 </a>
                                                 {{-- <a href="{{ route('admin.delete_user', ['temporary', $user->id]) }}" class="btn btn-warning btn-sm">Temporary Delete</a> --}}
                                                 {{-- <button class="btn btn-primary btn-sm">Pay ROI</button> --}}
                                         </td>

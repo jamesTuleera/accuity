@@ -152,7 +152,7 @@
                     <div class="pricing-table purple border bg-dark shadow-lg">
                         <h2 class="text-light">Bronze</h2>
                         <div class="pricing-features">
-                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$3,000</span>
+                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$1,000</span>
                             </div>
                             <div class="feature text-light">Maximum Deposit:<span class="text-light">$10,000</span>
                             </div>
