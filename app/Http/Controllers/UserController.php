@@ -135,7 +135,6 @@ class UserController extends Controller
     }
 
 
-
     public function withdrawalView()
     {
         return view('users.withdrawal');
