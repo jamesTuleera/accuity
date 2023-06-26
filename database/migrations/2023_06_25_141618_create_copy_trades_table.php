@@ -18,6 +18,7 @@ class CreateCopyTradesTable extends Migration
             $table->integer('user_id');
             $table->string('name')->nullable();
             $table->integer('percent')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

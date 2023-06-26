@@ -14,6 +14,11 @@
                 </div>
             </div>
         </div> --}}
+        @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            <h3 class="text-success">{{ session()->get('success') }}</h3>
+                        </div>
+                    @endif
 
         <div class="row profile">
             <div class="col-lg-3 col-sm-12 bg-dark p-3">

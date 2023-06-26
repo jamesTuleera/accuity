@@ -5,6 +5,11 @@
             <div class="mt-2 mb-4">
                 <h1 class="title1 text-light">Transactions on your account</h1>
             </div>
+            @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            <h3 class="text-success">{{ session()->get('success') }}</h3>
+                        </div>
+                    @endif
 
             <div class="row mb-5">
                 <div class="col text-center card p-4 bg-dark">

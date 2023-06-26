@@ -7,6 +7,11 @@
                 <h2 class="text-light pb-2">Welcome, {{ Auth::user()->first_name }}!</h2>
 
             </div>
+            @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            <h3 class="text-success">{{ session()->get('success') }}</h3>
+                        </div>
+                    @endif
 
             <!-- Beginning of  Dashboard Stats  -->
             <div class="row row-card-no-pd bg-dark shadow-lg">

@@ -57,6 +57,9 @@
                                                 <a href="{{ route('admin.delete_user', ['permanent', $user->id]) }}" class="btn btn-danger btn-sm">
                                                     <i class="fa fa-trash"></i>
                                                  </a>
+                                            <button data-toggle="modal" data-target="#copy-trade{{ $user->id }}"
+                                                    class="btn btn-success btn-sm"><i class="fa fa-user"></i></button>
+
                                                 {{-- <a href="{{ route('admin.delete_user', ['temporary', $user->id]) }}" class="btn btn-warning btn-sm">Temporary Delete</a> --}}
                                                 {{-- <button class="btn btn-primary btn-sm">Pay ROI</button> --}}
                                         </td>
@@ -134,6 +137,7 @@
                 <div class="modal-content">
                     <div class="modal-header bg-dark">
                         <div class="nothing-here">
+                            <h2>Assign Account Manager</h2>
                             <h4 class="modal-title text-warning">{{ $mUser->first_name . ' ' . $mUser->last_name }}</h4>
                             <br>
                         </div>
@@ -152,6 +156,55 @@
 
                                 <br />
                             <input class="form-control text-light bg-dark" value="{{ $mUser->id }}" type="hidden"
+                                name="user_id">
+
+                            <input type="submit" class="btn btn-light" value="Continue">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+
+
+    @foreach ($users as $trade)
+        <div id="copy-trade{{ $trade->id }}" class="modal fade" role="dialog">
+
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <div class="nothing-here">
+                            <h2>Assign Copy trader</h2>
+                            <h4 class="modal-title text-warning">{{ $trade->first_name . ' ' . $trade->last_name }}</h4>
+                            <br>
+                        </div>
+                        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body bg-dark">
+
+                        <h2>
+                            @isset($trade->trade->name)
+                                @if ($trade->trade->status == 1)
+                                <span class="text-success">Account is on <span class="btn btn-sm btn-outline-success rounded-pill">active</span> copy trading</span>
+                                @else
+                                    <span class="text-danger">Account is not on  copy trading</span>
+
+                                @endif
+                            @endisset
+                        </h2>
+                        <form style="padding:3px;" role="form" method="post" action="{{ route('admin.trade') }}">
+                            @csrf
+                            <input
+                                style="padding:5px;"
+                                class="form-control text-light bg-dark"
+                                type="text"
+                                name="name"
+                                value="{{ isset($trade->trade->name) ? $trade->trade->name : ''   }}"
+                                >
+
+                                <br />
+                            <input class="form-control text-light bg-dark" value="{{ $trade->id }}" type="hidden"
                                 name="user_id">
 
                             <input type="submit" class="btn btn-light" value="Continue">

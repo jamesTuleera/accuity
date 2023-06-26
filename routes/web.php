@@ -49,6 +49,9 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'user']],  funct
 
     Route::get('/my-referrals', 'UserController@referralView')->name('users.referrals');
 
+    /// COPY TRADING
+    Route::get('/copy-trading/{id}', 'CopyTradeController@index')->name('users.copy.trade');
+
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']],  function() {
@@ -78,7 +81,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']],  function
 
     Route::group(['prefix' =>'copy-trade'], function(){
         // Route::GET('/', 'Admin\CopyTradeController@index')->name('admin.copy.trade');
-        Route::POST('/add', 'Admin\CopyTradeController@add')->name('admin.add_plans');
+        Route::POST('/add', 'Admin\CopyTradeController@add')->name('admin.trade');
         // Route::GET('/delete/{id}', 'Admin\CopyTradeController@delete')->name('admin.delete_plans');
         // Route::POST('/edit', 'Admin\CopyTradeController@edit')->name('admin.edit_plans');
     });

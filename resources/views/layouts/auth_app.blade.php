@@ -69,7 +69,37 @@
             </div>
         </div>
     </div>
+
+
+
+    <div id="copyTrade" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4 class="modal-title text-light">Copy Trade</h4>
+                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body bg-dark p-3">
+
+
+
+                    @if (isset(Auth::user()->trade->name))
+
+
+                        <h4>Click below to copy trade from {{ Auth::user()->trade->name }}</h4>
+
+                        <a href="{{ route('users.copy.trade', Auth::user()->trade->id) }}" class="btn btn-sm btn-success"> Copy trade</a>
+                        @else
+                        <h4 class="text-light">Kindly contact your account manager to assign you a trader</h4>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- /deposit Modal -->
+
+
+
 
 
 

@@ -94,31 +94,40 @@
                 </div>
             </div> --}}
             <ul class="nav nav-primary">
-                <li class="nav-item active">
+                <li class="nav-item {{Route::currentRouteName() == 'users.user_dashboard' ? 'active' : ''}}">
                     <a href="{{route('users.user_dashboard')}}">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item">
+
+                <li class="nav-item {{Route::currentRouteName() == 'users.deposit' ? 'active' : ''}}">
                     <a href="{{route('users.deposit')}}">
                         <i class="fa fa-th " aria-hidden="true"></i>
-                        <span class="sub-item">Deposit</span>
+                        <p>Deposit</p>
                     </a>
                 </li>
-                <li class="nav-item">
+
+
+                {{-- <li class="nav-item {{Route::currentRouteName() == 'users.deposit' ? 'active text-dark' : ''}}">
+                    <a href="{{route('users.deposit')}}">
+                        <i class="fa fa-th " aria-hidden="true"></i>
+                        <span class="sub-item"></span>
+                    </a>
+                </li> --}}
+                <li class="nav-item {{Route::currentRouteName() == 'users.withdrawal' ? 'active' : ''}}">
                     <a href="{{route('users.withdrawal')}}">
-                        <i class="fa fa-life-ring" aria-hidden="true"></i>
-                        <span class="sub-item">Withdrawal</span>
+                        <i class="fa fa-money-bill" aria-hidden="true"></i>
+                        <p class="">Withdrawal</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{Route::currentRouteName() == 'users.transactions' ? 'active' : ''}}">
                     <a href="{{route('users.transactions')}}">
                         <i class="fa fa-th " aria-hidden="true"></i>
                         <p>Transactions history</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{Route::currentRouteName() == 'users.account_details' ? 'active' : ''}}">
                     <a data-toggle="collapse" href="#bases">
                         <i class="fas fa-user"></i>
                         <p>Account </p>
@@ -139,21 +148,32 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{Route::currentRouteName() == 'users.referrals' ? 'active' : ''}}">
                     <a href="{{route('users.referrals')}}">
                         <i class="fa fa-recycle " aria-hidden="true"></i>
                         <p>Refer Users</p>
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {{Route::currentRouteName() == 'users.profile' ? 'active' : ''}}">
                     <a href="{{route('users.profile')}}">
                         <i class="fa fa-cog " aria-hidden="true"></i>
                         <p>Profle setting</p>
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item ">
+                    <a href="#"
+                        data-toggle="modal"
+                        data-target="#copyTrade"
+                    >
+                    <i class="fa fa-th" aria-hidden="true"></i>
+
+                    <p>Copy Trade</p>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
                     <a href="#"
                         data-toggle="modal"
                         data-target="#accountManager"
@@ -163,7 +183,7 @@
                     </a>
                 </li>
 {{--
-                <li class="nav-item">
+                <li class="nav-item {{Route::currentRouteName() == 'users.support' ? 'active' : ''}}">
                     <a href="{{route('users.support')}}">
                         <i class="fa fa-life-ring" aria-hidden="true"></i>
                         <p>Support</p>

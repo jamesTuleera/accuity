@@ -26,7 +26,11 @@ class User extends Authenticatable
        return $this->hasOne(Wallet::class, 'user_id', 'id');
     }
 
-    
+    public function trade() : HasOne {
+        return $this->hasOne(CopyTrade::class);
+    }
+
+
 
     // protected $fillable = [
     //     'name', 'email', 'password',
