@@ -406,10 +406,9 @@
                     </div>
 
 
-
+{{--
                     <div class="white-box" style="height: 450px;">
                         <h4 style="margin-bottom:5px;"> Forex Market Fundamental Data</h4>
-                        <!-- TradingView Widget BEGIN -->
 
                         <span id="tradingview-copyright"><a ref="nofollow noopener" target="_blank"
                                 href="http://www.tradingview.com"
@@ -438,7 +437,7 @@
                             }
                         </script>
 
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
