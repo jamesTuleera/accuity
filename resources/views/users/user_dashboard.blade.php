@@ -7,11 +7,11 @@
                 <h2 class="text-light pb-2">Welcome, {{ Auth::user()->first_name }}!</h2>
 
             </div>
-            @if(session()->has('success'))
-                        <div class="alert alert-success">
-                            <h3 class="text-success">{{ session()->get('success') }}</h3>
-                        </div>
-                    @endif
+            @if (session()->has('success'))
+                <div class="alert alert-success">
+                    <h3 class="text-success">{{ session()->get('success') }}</h3>
+                </div>
+            @endif
 
             <!-- Beginning of  Dashboard Stats  -->
             <div class="row row-card-no-pd bg-dark shadow-lg">
@@ -197,7 +197,8 @@
                             <div class="feature text-light">Account manager:<span class="text-light">
                                     <li class="fa fa-check"></li>
                                 </span></div>
-                            <div class="feature text-light">Contract Duration: <span class="text-light">3-4 Weeks</span></div>
+                            <div class="feature text-light">Contract Duration: <span class="text-light">3-4 Weeks</span>
+                            </div>
                         </div> <br>
                         <div class="">
                             <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;"
@@ -224,7 +225,8 @@
                             <div class="feature text-light">Account manager:<span class="text-light">
                                     <li class="fa fa-check"></li>
                                 </span></div>
-                            <div class="feature text-light">Contract Duration: <span class="text-light">6 Weeks</span></div>
+                            <div class="feature text-light">Contract Duration: <span class="text-light">6 Weeks</span>
+                            </div>
                         </div> <br>
                         <div class="">
                             <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;"
@@ -406,7 +408,7 @@
                     </div>
 
 
-{{--
+                    {{--
                     <div class="white-box" style="height: 450px;">
                         <h4 style="margin-bottom:5px;"> Forex Market Fundamental Data</h4>
 
