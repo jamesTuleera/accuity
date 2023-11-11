@@ -388,7 +388,7 @@
                                                                     <br>
                                                                     <b>Minimum Deposit</b> <i
                                                                         style='color:black;font-weight:bolder'> - </i>
-                                                                    $1,000
+                                                                    $3,000
                                                                 </h4>
                                                             </div>
                                                         </div>
