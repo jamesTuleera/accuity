@@ -99,8 +99,8 @@
                                 <p class="text-warning"> <i class="fas fa-angle-double-right"></i>
                                     {{ $wlt->wallet_address }} <span
                                         class="pt-0 pb-0 pl-2 pr-2 m-0 btn btn-outline-primary btn-sm buttonText"
-                                        id="btnTxt" onclick="copyTxt('{{ 'refLink' . $wlt->id }}', 'btnTxt')">copy
-                                        link</span></p>
+                                        id="{{'btnTxt'. $wlt->id }}" onclick="copyTxt('{{ 'refLink' . $wlt->id }}', '{{'btnTxt' . $wlt->id }}')"> <i class="fa fa-copy"></i> copy
+                                        </span></p>
 
 
 

@@ -155,86 +155,101 @@
 
                 <div class="col-lg-4 p-4 card bg-dark shadow-lg">
                     <div class="pricing-table purple border bg-dark shadow-lg">
-                        <h2 class="text-light">Bronze</h2>
+                        <h2 class="text-light">Basic</h2>
                         <div class="pricing-features">
-                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$3,000</span>
+                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$500</span>
                             </div>
-                            <div class="feature text-light">Maximum Deposit:<span class="text-light">$10,000</span>
+                            <div class="feature text-light">Maximum Deposit:<span class="text-light">$3,000</span>
                             </div>
-                            <div class="feature text-light">Risk management:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Standard Options:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Account manager:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Contract Duration: <span class="text-light">2-3
-                                    Weeks</span></div>
+                            <div class="feature text-light">
+                                    <p>
+                                        <br>Return Of Investment in 7 days
+                                        <br>Deposit Included In Payment
+                                        <br>Reinvestment Available
+                                    </p>
+                            </div>
+
                         </div> <br>
                         <div class="">
                             <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;"
-                                href="{{ route('users.deposit') }}">Deposit</a>
+                                href="{{ route('users.deposit') }}">Start now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 p-4 card bg-dark shadow-lg">
-                    <div class="pricing-table purple border bg-dark shadow-lg">
-                        <h2 class="text-light">Silver</h2>
-                        <div class="pricing-features">
-                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$10,000</span>
-                            </div>
-                            <div class="feature text-light">Maximum Deposit:<span class="text-light">$50,000</span>
-                            </div>
-                            <div class="feature text-light">Risk management:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Standard Options:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Account manager:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Contract Duration: <span class="text-light">3-4 Weeks</span>
-                            </div>
-                        </div> <br>
-                        <div class="">
-                            <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;"
-                                href="{{ route('users.deposit') }}">Deposit</a>
-                        </div>
-                    </div>
-                </div>
-
 
                 <div class="col-lg-4 p-4 card bg-dark shadow-lg">
                     <div class="pricing-table purple border bg-dark shadow-lg">
                         <h2 class="text-light">Gold</h2>
                         <div class="pricing-features">
-                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$50,000</span>
+                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$5,000</span>
                             </div>
-                            <div class="feature text-light">Maximum Deposit:<span class="text-light">Unlimited</span>
+                            <div class="feature text-light">Maximum Deposit:<span class="text-light">$10,000</span>
                             </div>
-                            <div class="feature text-light">Risk management:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Standard Options:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Account manager:<span class="text-light">
-                                    <li class="fa fa-check"></li>
-                                </span></div>
-                            <div class="feature text-light">Contract Duration: <span class="text-light">6 Weeks</span>
+                            <div class="feature text-light">
+                                    <p>
+                                        <br>Return Of Investment in 2 Months
+                                        <br>Deposit Included In Payment
+                                        <br>Reinvestment Available
+                                    </p>
                             </div>
+
                         </div> <br>
                         <div class="">
                             <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;"
-                                href="{{ route('users.deposit') }}">Deposit</a>
+                                href="{{ route('users.deposit') }}">Start now</a>
                         </div>
                     </div>
                 </div>
 
+
+                <div class="col-lg-4 p-4 card bg-dark shadow-lg">
+                    <div class="pricing-table purple border bg-dark shadow-lg">
+                        <h2 class="text-light">VIP PLAN</h2>
+                        <div class="pricing-features">
+                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$15,000</span>
+                            </div>
+                            <div class="feature text-light">Maximum Deposit:<span class="text-light">$50,000</span>
+                            </div>
+                            <div class="feature text-light">
+                                    <p>
+                                        <br>Return Of Investment in 6-12 Months
+                                        <br>Deposit Included In Payment
+                                        <br>Reinvestment Available
+                                    </p>
+                            </div>
+
+                        </div> <br>
+                        <div class="">
+                            <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;"
+                                href="{{ route('users.deposit') }}">Start now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 p-4 card bg-dark shadow-lg">
+                    <div class="pricing-table purple border bg-dark shadow-lg">
+                        <h2 class="text-light">VVIP PLAN</h2>
+                        <div class="pricing-features">
+                            <div class="feature text-light">Minimum Deposit:<span class="text-light">$50,000</span>
+                            </div>
+                            <div class="feature text-light">Maximum Deposit:<span class="text-light">$100,000</span>
+                            </div>
+                            <div class="feature text-light">
+                                    <p>
+                                        <br>Return Of Investment in 6-12 Months
+                                        <br>Deposit Included In Payment
+                                        <br>Reinvestment Available
+                                    </p>
+                            </div>
+
+                        </div> <br>
+                        <div class="">
+                            <a class="btn btn-block btn-primary rounded rounded-pill" style=" border-radius: 40px;"
+                                href="{{ route('users.deposit') }}">Start now</a>
+                        </div>
+                    </div>
+                </div>
 
 
 

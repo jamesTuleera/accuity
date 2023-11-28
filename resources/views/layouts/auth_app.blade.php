@@ -197,7 +197,7 @@
             btnText.style.fontStyle = 'italic'
 
             setTimeout(() => {
-                btnText.innerHTML = 'copy link'
+                btnText.innerHTML = 'copy'
             }, 2000);
         }
     </script>

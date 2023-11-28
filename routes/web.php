@@ -23,6 +23,14 @@ Route::get('/about-us', 'PublicController@about')->name('about');
 Route::get('/contact-us', 'PublicController@contactView')->name('contact');
 Route::get('/countries', 'UtilityController@countries');
 
+Route::group( ['prefix' => 'verification', 'middleware' => ['auth']], function(){
+
+    Route::get('/', 'VerificationCheckController@index')->name('verification');
+
+    Route::post('/upload-verification', 'VerificationCheckController@submit')->name('submit_verification');
+});
+
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
