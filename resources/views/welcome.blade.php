@@ -678,6 +678,106 @@
                         </div>
                     </div>
                 </section> --}}
+
+                <section id="token-sale-mobile-app price" class="token-sale-mobile-app section-padding bg-gradient"
+                    data-midnight="white">
+                    <div class="token-sale">
+                        <div class="container-fluid">
+                            <div class="container">
+                                <div class="dark-bg-heading text-center">
+                                    <h6 class="sub-title">Testimony/Reviews</h6>
+                                    <h2 class="title">Testimony/Reviews</h2>
+                                </div>
+                                <div class="row align-items-center">
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify1.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify2.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify3.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify4.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify5.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify6.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify7.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify8.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+<div class="col-xl-4 col-lg-4 col-md-12 animated"
+    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+    style='margin-bottom:25px'>
+    <video width="320" height="440" controls>
+        <source src="{{ asset('homeAsset/videos/testify9.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+</div>
+
+
+
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!--/ Token Sale Mobile App -->
 
                 <!--/ Advisors -
