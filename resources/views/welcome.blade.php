@@ -62,8 +62,7 @@
             <g>
                 <circle cx="256" cy="256" r="75" fill="none" stroke="url(#loaderLinearColors)" />
             </g>
-            <circle cx="256" cy="256" r="60" fill="url(#loaderImage)" stroke="none"
-                stroke-width="0" />
+            <circle cx="256" cy="256" r="60" fill="url(#loaderImage)" stroke="none" stroke-width="0" />
 
             <!-- Change the preloader logo here -->
             <defs>
@@ -119,11 +118,11 @@
 
                         </ul>
                         <span id="slide-line"></span>
-                        <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0" href="{{ route('login') }}"
-                            >Sign in</a>
+                        <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0"
+                            href="{{ route('login') }}">Sign in</a>
                         &nbsp; &nbsp;
                         <a class="btn btn-sm btn-gradient-purple btn-glow my-2 my-sm-0"
-                            href="{{ route('register') }}" >Sign Up</a>
+                            href="{{ route('register') }}">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -340,7 +339,7 @@
 
 
                 <!--/ Token Sale Mobile App -->
-                <section id="token-sale-mobile-app price" class="token-sale-mobile-app section-padding bg-gradient"
+                {{-- <section id="token-sale-mobile-app price" class="token-sale-mobile-app section-padding bg-gradient"
                     data-midnight="white">
                     <div class="token-sale">
                         <div class="container-fluid">
@@ -359,10 +358,7 @@
                                         <div class="token-sale-counter">
 
                                             <div class="token-details text-center">
-                                                <!-- Counter Starts-->
 
-                                                <!-- Counter Ends -->
-                                                <!-- Progressbar Starts -->
                                                 <div class="loading-bar mb-2 position-relative">
                                                     <div class="elementor-widget-wrap elementor-element-populated">
                                                         <div class="elementor-element elementor-element-9998607 elementor-widget elementor-widget-heading"
@@ -453,7 +449,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Progressbar Starts -->
                                                     <a href="{{ route('login') }}"
                                                         class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
                                                 </div>
@@ -471,10 +466,7 @@
                                         <div class="token-sale-counter">
 
                                             <div class="token-details text-center">
-                                                <!-- Counter Starts-->
 
-                                                <!-- Counter Ends -->
-                                                <!-- Progressbar Starts -->
                                                 <div class="loading-bar mb-2 position-relative">
                                                     <div class="elementor-widget-wrap elementor-element-populated">
                                                         <div class="elementor-element elementor-element-9998607 elementor-widget elementor-widget-heading"
@@ -565,7 +557,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Progressbar Starts -->
                                                     <a href="{{ route('login') }}"
                                                         class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
                                                 </div>
@@ -585,9 +576,7 @@
                                         <div class="token-sale-counter">
 
                                             <div class="token-details text-center">
-                                                <!-- Counter Starts-->
-                                                <!-- Counter Ends -->
-                                                <!-- Progressbar Starts -->
+
                                                 <div class="loading-bar mb-2 position-relative">
                                                     <div class="elementor-widget-wrap elementor-element-populated">
                                                         <div class="elementor-element elementor-element-9998607 elementor-widget elementor-widget-heading"
@@ -678,31 +667,17 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Progressbar Starts -->
                                                     <a href="{{ route('login') }}"
                                                         class="btn btn-lg btn-gradient-blue btn-glow">Get Started</a>
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
-
-                </section>
+                    </div>
+                </section> --}}
                 <!--/ Token Sale Mobile App -->
 
                 <!--/ Advisors -
@@ -1062,7 +1037,7 @@
         </div>
     </footer>
 
-@include('layouts.component/chat')
+    @include('layouts.component/chat')
     <!-- BEGIN VENDOR JS-->
     <script src="{{ asset('homeAsset/theme-assets/vendors/vendors.min.js') }}"></script>
     <!-- BEGIN VENDOR JS-->
