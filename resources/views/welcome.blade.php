@@ -39,6 +39,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <!-- END Custom CSS-->
+
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="{{ asset('owl_assets/owlcarousel/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('owl_assets/owlcarousel/assets/owl.theme.default.min.css') }}">
+
+    <!-- javascript -->
+    <script src="{{ asset('owl_assets/vendors/jquery.min.js') }}"></script>
+    <script src="{{ asset('owl_assets/owlcarousel/owl.carousel.js') }}"></script>
+
+
+
 </head>
 
 <body class=" 1-column page-animated template-3g-graphics" data-menu-open="hover" data-menu="">
@@ -688,92 +700,135 @@
                                     <h6 class="sub-title">Testimony/Reviews</h6>
                                     <h2 class="title">Testimony/Reviews</h2>
                                 </div>
-                                <div class="row align-items-center">
 
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify1.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
+                                <div class="home-demo">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+                                            <h3>Demo</h3>
+                                            <div class="owl-carousel">
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify1.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify2.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify3.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify4.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify5.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify6.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify7.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify8.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-xl-4 col-lg-4 col-md-12 animated"
+                                                        data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
+                                                        style='margin-bottom:25px'>
+                                                        <video width="320" height="440" controls>
+                                                            <source src="{{ asset('homeAsset/videos/testify9.mp4') }}"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
 
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify2.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify3.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify4.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify5.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify6.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify7.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify8.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-<div class="col-xl-4 col-lg-4 col-md-12 animated"
-    data-animation="fadeInLeftShorter" data-animation-delay="0.6s"
-    style='margin-bottom:25px'>
-    <video width="320" height="440" controls>
-        <source src="{{ asset('homeAsset/videos/testify9.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-</div>
-
-
-
-</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var owl = $('.owl-carousel');
+                                    owl.owlCarousel({
+                                        margin: 10,
+                                        loop: true,
+                                        responsive: {
+                                            0: {
+                                                items: 1
+                                            },
+                                            600: {
+                                                items: 2
+                                            },
+                                            1000: {
+                                                items: 3
+                                            }
+                                        }
+                                    })
+                                </script>
+                                
                             </div>
                         </div>
                     </div>
@@ -1138,6 +1193,7 @@
     </footer>
 
     @include('layouts.component/chat')
+
     <!-- BEGIN VENDOR JS-->
     <script src="{{ asset('homeAsset/theme-assets/vendors/vendors.min.js') }}"></script>
     <!-- BEGIN VENDOR JS-->
@@ -1154,6 +1210,8 @@
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="{{ asset('homeAsset/theme-assets/js/scripts/particles-type1.min.js') }}"></script>
     <!-- END PAGE LEVEL JS-->
+
+
 </body>
 
 </html>
