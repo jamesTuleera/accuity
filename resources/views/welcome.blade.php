@@ -704,7 +704,6 @@
                                 <div class="home-demo">
                                     <div class="row">
                                         <div class="large-12 columns">
-                                            <h3>Demo</h3>
                                             <div class="owl-carousel">
                                                 <div class="item">
                                                     <div class="col-xl-4 col-lg-4 col-md-12 animated"
