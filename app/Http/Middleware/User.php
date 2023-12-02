@@ -17,6 +17,12 @@ class User
     public function handle($request, Closure $next)
     {
         $user = Auth::user();
+
+        if ($user->verified_at == null) {
+            return redirect()->route('verification'); //  ('users.verification');
+        }
+
+
         if($user->role == 1){
             if ($user->status != 'active') {
                 return redirect()->route('home');
@@ -26,5 +32,6 @@ class User
         }else{
             abort(403);
         }
+        
     }
 }

@@ -16,10 +16,10 @@ class UserVerification
      */
     public function handle($request, Closure $next)
     {
-    $user =     Auth::user();
-        if ($user->id_verification == null) {
-            return redirect()->route('verification'); //  ('users.verification');
-        }
+    // $user =     Auth::user();
+    //     if ($user->id_verification == null) {
+    //         return redirect()->route('verification'); //  ('users.verification');
+    //     }
 
         return $next($request);
     }

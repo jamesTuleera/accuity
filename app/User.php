@@ -30,6 +30,10 @@ class User extends Authenticatable
         return $this->hasOne(CopyTrade::class);
     }
 
+    public function verification() : HasMany {
+        return $this->hasMany(Verification::class);
+    }
+
 
 
     // protected $fillable = [

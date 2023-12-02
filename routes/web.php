@@ -94,6 +94,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']],  function
         // Route::POST('/edit', 'Admin\CopyTradeController@edit')->name('admin.edit_plans');
     });
 
+    Route::group(['prefix' =>'verifications'], function(){
+        Route::get('/', 'Admin\VerificationController@index')->name('admin.verification');
+        Route::POST('/update', 'Admin\VerificationController@update')->name('admin.verification.update');
+        // Route::GET('/delete', 'Admin\SiteInfoController@confirm')->name('admin.verification.delete');
+    });
+    
     Route::get('/users/{id}', 'Admin\AdminController@userDetails')->name('admin.user-details');
 
 

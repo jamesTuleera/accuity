@@ -94,6 +94,15 @@
                         <p>Set wallets</p>
                     </a>
                 </li>
+
+
+                <li class="nav-item {{Route::currentRouteName() == 'admin.verification' ? 'active text-dark' : ''}}">
+                    <a href="{{route('admin.verification')}}">
+                        <i class="fa fa-users " aria-hidden="true"></i>
+                        <p>Verification</p>
+                    </a>
+                </li>
+
                 <li class="nav-item {{Route::currentRouteName() == 'admin.plans' ? 'active text-dark' : ''}}">
                     <a href="{{route('admin.plans')}}">
                         <i class="fa fa-th " aria-hidden="true"></i>
@@ -106,7 +115,7 @@
                         <p>Confirm payment</p>
                     </a>
                 </li>
-                
+
 
                 <li class="nav-item {{Route::currentRouteName() == 'admin.withdrawal_request' ? 'active text-dark' : ''}}">
                     <a href="{{route('admin.withdrawal_request')}}">
