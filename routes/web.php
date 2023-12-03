@@ -24,9 +24,9 @@ Route::get('/contact-us', 'PublicController@contactView')->name('contact');
 Route::get('/countries', 'UtilityController@countries');
 
 Route::group( ['prefix' => 'verification', 'middleware' => ['auth']], function(){
-    Route::get('/withdrawal', 'UserController@withdrawalView')->name('users.withdrawal');
-    Route::POST('/withdrawal-action', 'UserController@withdrawal')->name('users.withdraw_action');
 
+    Route::get('/account-details', 'UserController@accountDetailsView')->name('users.account_details');
+    Route::POST('/update-btc-wallet', 'UserController@btcUpdateWallet')->name('users.btc_wallet');
 
     Route::get('/', 'VerificationCheckController@index')->name('verification');
     Route::post('/upload-verification', 'VerificationCheckController@submit')->name('submit_verification');
@@ -47,13 +47,14 @@ Route::group(['middleware' => 'auth'], function (){
 
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'user']],  function() {
     Route::get('/', 'UserController@index')->name('users.user_dashboard');
-    Route::get('/account-details', 'UserController@accountDetailsView')->name('users.account_details');
     Route::get('/notifications', 'UserController@notificationView')->name('users.notifications');
     Route::get('/support', 'UserController@supportView')->name('users.support');
     Route::get('/deposit', 'UserController@depositView')->name('users.deposit');
     Route::post('/deposit', 'UserController@deposit')->name('users.depositing');
    Route::get('/account-transactions', 'UserController@transactions')->name('users.transactions');
-    Route::POST('/update-btc-wallet', 'UserController@btcUpdateWallet')->name('users.btc_wallet');
+
+    Route::get('/withdrawal', 'UserController@withdrawalView')->name('users.withdrawal');
+    Route::POST('/withdrawal-action', 'UserController@withdrawal')->name('users.withdraw_action');
 
     Route::get('/my-referrals', 'UserController@referralView')->name('users.referrals');
 

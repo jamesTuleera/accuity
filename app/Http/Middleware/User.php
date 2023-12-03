@@ -23,7 +23,7 @@ class User
         }
 
         if($user->wallet->btc_address == null){
-            return redirect()->route('users.withdrawal'); //  ('users.verification');
+            return redirect()->route('users.account_details'); //  ('users.verification');
         }
 
 
