@@ -90,7 +90,6 @@ class RegisterController extends Controller
         Wallet::create([
             'user_id' => $user->id,
             'bonus' => 10,
-            'btc_address' => $data['btc_address']
         ]);
 
         try {

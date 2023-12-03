@@ -23,8 +23,8 @@
 
                     <select name="id_type" id="" class="form-control">
                         <option value="voters_card">Voters's card</option>
-                        <option value="voters_card">Driver's Liscence</option>
-                        <option value="voters_card">National ID' card</option>
+                        <option value="drivers_liscence">Driver's Liscence</option>
+                        <option value="national_id">National ID' card</option>
                     </select>
 
                     <div class="form-group mt-3">

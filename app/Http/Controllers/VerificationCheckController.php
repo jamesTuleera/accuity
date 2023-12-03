@@ -43,7 +43,7 @@ class VerificationCheckController extends Controller
             'user_id' => Auth::user()->id,
             'id_card_front' => $saveName,
             'id_card_back' => $saveDocName,
-            'id_type' => $r->type,
+            'id_type' => $r->id_type,
         ]);
 
         return back()->with('success', 'Your ID verification has been submitted successfully and it\'s pending verification by the admin ');

@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class AutoAddProfit extends Command
 {
@@ -11,7 +12,7 @@ class AutoAddProfit extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'command:autoAddProfit';
 
     /**
      * The console command description.
@@ -37,6 +38,7 @@ class AutoAddProfit extends Command
      */
     public function handle()
     {
+        Log::info('testing');
         return 0;
     }
 }

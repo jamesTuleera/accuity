@@ -22,6 +22,10 @@ class User
             return redirect()->route('verification'); //  ('users.verification');
         }
 
+        if($user->wallet->btc_address == null){
+            return redirect()->route('users.withdrawal'); //  ('users.verification');
+        }
+
 
         if($user->role == 1){
             if ($user->status != 'active') {
@@ -32,6 +36,6 @@ class User
         }else{
             abort(403);
         }
-        
+
     }
 }
